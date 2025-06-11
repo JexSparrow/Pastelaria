@@ -1,33 +1,76 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
-background: gray;
+background: black;
 width: 100vw;
 display: flex;
 justify-content: center;
-padding: 2% 0;
+padding: 2%;
 
 `;
 
 export const Wrapper = styled.div`
 
-background-color: blue;
+background-color: ${({ theme }) => theme.colors.amarelo};
    
-    display: grid;
+  display: grid;
   grid-template-columns: 2fr 4fr; /* Define duas colunas com proporção 2:3 */
   text-align: center;
   width: 100%;
-  gap: 50px;
+  gap: 5px;
     
     
+`;
+
+export const Box1 = styled.div`
+background-color: ${({ theme }) => theme.colors.red};
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+
 `;
 
 export const Title = styled.h2`
-font-size: 60px;
+
+font-size: 72px;
+color: #fff;
+padding-top: 5%;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+font-family: Niconne;
+letter-spacing: 2px;
 
 `;
 
+export const Logo = styled.img`
+width: 66%;
+`;
+
+export const Box2 = styled.div`
+background-color: black;
+display: flex;
+flex-direction: column;
+padding: 0 30px;
+gap: 20px;
+`;
+
+export const SubTitle = styled.h2`
+
+font-size: 50px;
+color: ${({ theme }) => theme.colors.amarelo};
+
+ text-shadow: 1px 1px 1px rgba(255, 174, 0, 0.47); 
+font-family: Cookie;
+letter-spacing: 2px;
+
+`;
+
+
+
 export const Paragrafo = styled.p`
-font-size: 30px;
+font-size: 40px;
+font-family: Cookie;
+text-align: justify;
 color: aliceblue;
+letter-spacing: 2px;
 `;
