@@ -21,6 +21,7 @@ font-size: 80px;
 
 export const Paragrafo = styled.p`
 font-size: 30px;
+padding-bottom: 20px;
 `;
 
 export const Conteiner2 = styled.div`
@@ -49,4 +50,7 @@ export const Wrapper2 = styled.div`
   border: 5px solid wheat;
   width: 100%; /* O item dentro da coluna sempre ocupará 100% da largura daquela coluna */
   height: 100%; /* O item dentro da coluna ocupará 100% da altura disponível da linha do grid */
+`;
+
+export const Carrosel = styled.div`
 `;

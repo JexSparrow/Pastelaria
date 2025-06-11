@@ -14,7 +14,8 @@ export const fairDays = [
         openingHours: 'Das 17:00 às 22:00',
         description: 'Feira noturna com diversas opções de comida e artesanato local.',
         mapLink: 'https://maps.app.goo.gl/link-do-mapa-terca', // Substitua
-        images: [img1, img2, img3]
+        images: [img1, img2, img3],
+        layout: 'reverse'
     },
     {
         id: 'quinta',
@@ -23,7 +24,8 @@ export const fairDays = [
         openingHours: 'Das 8:00 às 14:00',
         description: 'Feira tradicional com produtos frescos direto dos produtores rurais.',
         mapLink: 'https://maps.app.goo.gl/link-do-mapa-quinta', // Substitua
-        images: [img1, img2, img3]
+        images: [img1, img2, img3],
+
     },
     {
         id: 'sexta',
@@ -32,7 +34,8 @@ export const fairDays = [
         openingHours: 'Das 9:00 às 15:00',
         description: 'Feira gastronômica com food trucks e especialidades regionais.',
         mapLink: 'https://maps.app.goo.gl/link-do-mapa-sexta', // Substitua
-        images: [img1, img2, img3]
+        images: [img1, img2, img3],
+        layout: 'reverse'
     },
     {
         id: 'sabado',
@@ -50,6 +53,7 @@ export const fairDays = [
         openingHours: 'Das 8:00 às 16:00',
         description: 'Feira de artesanato e antiguidades, ideal para um passeio em família.',
         mapLink: 'https://maps.app.goo.gl/link-do-mapa-domingo', // Substitua
-        images: [img1, img2, img3]
+        images: [img1, img2, img3],
+        layout: 'reverse'
     }
 ];

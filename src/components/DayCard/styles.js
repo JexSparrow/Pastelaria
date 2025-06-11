@@ -12,10 +12,20 @@ background-color: black;
 
 export const Wrapper = styled.div`
 display: flex;
-gap: 50px;
-padding: 0 2%;
+
+padding: 0 5%;
 background-color: black;
 height: 100%;
+
+/* ESTILO CONDICIONAL PARA Wrapper */
+    ${({ layoutDirection }) => layoutDirection === 'reverse' && `
+        flex-direction: row-reverse; 
+    `}
+    /* Você pode adicionar outros layouts aqui, por exemplo: */
+    ${({ layoutDirection }) => layoutDirection === 'column' && `
+        flex-direction: column;
+        align-items: center;
+    `}
 
 `;
 
@@ -26,6 +36,17 @@ letter-spacing: 1px ;
 text-align: center;
 color: ${({ theme }) => theme.colors.amarelo};
 text-shadow: 2px 2px 2px red;
+
+ /* ESTILO CONDICIONAL PARA Title */
+
+    ${({ layoutDirection }) => layoutDirection === 'left' && `
+        text-align: left; /* Alinha à esquerda se a prop for 'left' */
+        padding-left: 2%; /* Adicione padding se necessário para alinhar com o conteúdo */
+    `}
+    ${({ layoutDirection }) => layoutDirection === 'right' && `
+        text-align: right; /* Alinha à direita se a prop for 'right' */
+        padding-right: 2%; /* Adicione padding se necessário */
+    `}
 `;
 
 export const BoxTexto = styled.div`
@@ -35,6 +56,8 @@ display: flex;
 flex-direction: column;
 padding: 5% 0;
 justify-content: space-between;
+
+
 `;
 
 export const Endereco = styled.h3`
@@ -95,4 +118,14 @@ export const SwiperCustomStyles = styled.div`
   .swiper-pagination-bullets {
     bottom: 10px; /* Alinhe os pontos mais para cima se colidirem com o conteúdo */
   }
+`;
+
+export const SwiperWrapper = styled.div`
+    padding: 2%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
 `;
