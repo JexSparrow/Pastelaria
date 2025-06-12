@@ -1,56 +1,83 @@
-
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
-background-color: green;
-padding: 1%;
+    background-color:  ${({ theme }) => theme.colors.amarelo};
 `;
 
 export const Wrapper = styled.div`
-background-color: greenyellow;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+    background-color: ${({ theme }) => theme.colors.red}; /* Cor de debug, considere mudar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0;
+    border-top: 6px solid ${({ theme }) => theme.colors.amarelo};
+    border-bottom: 6px solid ${({ theme }) => theme.colors.amarelo};
 `;
 
 export const Title = styled.h2`
-font-size: 80px;
+    font-size: 102px;
+font-family: Cookie;
+color: ${({ theme }) => theme.colors.amarelo};
+text-shadow: 1px 1px 4px black;
+   
+    /* Exemplo: */
+    /* font-size: 5rem; */
+    /* @media (max-width: 768px) { font-size: 3rem; } */
+`;
+
+export const SubTitle = styled.h3`
+    font-size: 76px;
+    letter-spacing: 1px;
+    text-shadow: 1px 3px 4px rgba(255,0,0,1);
+    font-style: italic;
+    font-family: Style Script;
+    color: ${({ theme }) => theme.colors.amarelo};
+    padding: 5% 0;
+    
+    /* Exemplo: */
+    /* font-size: 5rem; */
+    /* @media (max-width: 768px) { font-size: 3rem; } */
 `;
 
 export const Paragrafo = styled.p`
-font-size: 30px;
-padding-bottom: 20px;
+    font-size: 30px; /* Considere usar rem/em para responsividade */
+    font-family: Lobster;
+    letter-spacing: 1px;
+    padding-bottom: 1%;
+    color: aliceblue;
 `;
 
 export const Conteiner2 = styled.div`
-  background-color: red; /* Cor de fundo do contêiner */
-  display: grid;
-  // Para 3 colunas de 30% cada, usamos a unidade de porcentagem diretamente
-  // ou repetimos a unidade 'fr' se quisermos que elas compartilhem o espaço restante igualmente.
-  // Como você quer 30% fixo, o melhor é usar '30% 30% 30%'
-  grid-template-columns: 30% 30% 30%; /* Três colunas, cada uma com 30% da largura */
-  gap: 1%; /* Adicionado um pequeno espaçamento entre as colunas, opcional. Ajuste conforme necessário. */
+    background-color: black; /* Cor de debug, considere mudar */
+    display: grid;
+    /* Usar 1fr distribui o espaço disponível igualmente após os gaps */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Ajuste o gap conforme necessário, em pixels ou rem/em */
 
-  // Definindo a altura do contêiner para 100% da altura da viewport
-  height: 100vh;
-  // Opcional: Para centralizar o conteúdo verticalmente dentro do grid, se houver espaço
-  align-items: center;
-  justify-content: center; 
+    /* Altura total do contêiner, use com cautela ou com box-sizing: border-box; */
+    /* height: 100vh; */ /* Removi o height: 100vh aqui, pois pode causar scroll indesejado com padding */
+    padding: 1%; /* Certifique-se de que box-sizing: border-box; esteja ativado globalmente */
 
-  // Se o padding fizer as colunas saírem do 100vh, pode ser melhor aplicar padding nos itens internos.
-  // Ou usar box-sizing: border-box; no CSS global para incluir padding e border no cálculo da largura/altura.
-  padding: 1%; /* Mantenha se desejar, mas lembre-se que isso pode afetar o 100vh se não tiver box-sizing: border-box; */
+    align-items: start; /* Alinha os itens ao topo das células do grid */
+    justify-content: center; /* Centraliza os itens horizontalmente se houver espaço */
+
+    @media (max-width: 1024px) { /* Exemplo de breakpoint para tablets */
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+
+    @media (max-width: 768px) { /* Exemplo de breakpoint para celulares */
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
 `;
 
 export const Wrapper2 = styled.div`
-  background-color: blue; /* Mudei para azul para diferenciar do contêiner */
-  padding: 1%;
-  border: 5px solid wheat;
-  width: 100%; /* O item dentro da coluna sempre ocupará 100% da largura daquela coluna */
-  height: 100%; /* O item dentro da coluna ocupará 100% da altura disponível da linha do grid */
-`;
-
-export const Carrosel = styled.div`
+    background-color: black; /* Cor de debug, considere mudar */
+    padding: 20px; /* Padding interno para o conteúdo de cada item */
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o título e o carrossel */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    text-align: center;
 `;

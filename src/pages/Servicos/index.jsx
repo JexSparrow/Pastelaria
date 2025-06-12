@@ -1,48 +1,38 @@
-import { Carrosel, Conteiner, Conteiner2, Paragrafo, Title, Wrapper, Wrapper2 } from "./styles";
+import { Conteiner, Conteiner2, Paragrafo, SubTitle, Title, Wrapper, Wrapper2 } from "./styles";
+import MenuCarousel from "../../components/MenuCarrosel"; // Importe o novo componente de carrossel
+import { menuItems } from "../../data/menuItems.js"; // Importe os dados dos itens de menu
 
 function Services() {
     return (
         <>
             <Conteiner>
-
                 <Wrapper>
-                    <Title>Cardápio</Title>
-                    <Paragrafo>Deguste inúmeas opções em nosso cardápio! Aproveite e Confira!
-                    </Paragrafo>
+                    <Title>~ Cardápio ~</Title>
+                    <Paragrafo>Deguste inúmeras opções em nosso cardápio! Aproveite e Confira!</Paragrafo>
                 </Wrapper>
 
                 <Conteiner2>
-
                     <Wrapper2>
-                        <Title>Pasteís</Title>
-                        <Carrosel >imagens</Carrosel>
-
+                        <SubTitle>Pastéis</SubTitle>
+                        {/* Carrossel de Pastéis (default: baixo para cima) */}
+                        <MenuCarousel items={menuItems.pastels} />
                     </Wrapper2>
 
                     <Wrapper2>
-                        <Title>Lanches</Title>
-                        <Carrosel >imagens</Carrosel>
+                        <SubTitle>Lanches</SubTitle>
+                        {/* Carrossel de Lanches (com reverseScroll: true) */}
+                        <MenuCarousel items={menuItems.snacks} reverseScroll={true} />
                     </Wrapper2>
 
                     <Wrapper2>
-                        <Title>Bebidas</Title>
-                        <Carrosel >imagens</Carrosel>
+                        <SubTitle>Bebidas</SubTitle>
+                        {/* Carrossel de Bebidas (default: baixo para cima) */}
+                        <MenuCarousel items={menuItems.drinks} />
                     </Wrapper2>
-
                 </Conteiner2>
-
-
-
-
-
-
-
-
-
-
             </Conteiner>
         </>
-    )
+    );
 }
 
 export default Services;
