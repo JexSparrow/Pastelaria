@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import background from "../../assets/background.jpg";
-import background2 from "../../assets/background2.jpg";
+import background from "../../assets/others/background.jpg";
+import background2 from "../../assets/others/background2.jpg";
 
 // #95261B;
 // #F3A20A;

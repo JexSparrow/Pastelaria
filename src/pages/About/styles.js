@@ -19,7 +19,6 @@ background-color: ${({ theme }) => theme.colors.amarelo};
   width: 100%;
   gap: 5px;
     
-    
 `;
 
 export const Box1 = styled.div`

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Conteiner, BackgroundOverlay, Header, Link, Logo, Paragrafo, Title, Wrapper } from "./styles";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/others/logo.png";
 
 function Home() {
   // Estado para controlar qual imagem está sendo exibida (true = primeira imagem, false = segunda)

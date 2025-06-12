@@ -1,6 +1,6 @@
 
 import { Box1, Box2, Conteiner, Logo, Paragrafo, SubTitle, Title, Wrapper } from "./styles"
-import logo2 from "../../assets/logo2.png"
+import logo2 from "../../assets/others/logo2.png"
 
 function About() {
 
