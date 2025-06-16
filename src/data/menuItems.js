@@ -2,6 +2,7 @@
 import carne from "../assets/menu/pasteis/carne.png";
 import queijo from "../assets/menu/pasteis/queijo.png";
 import frango from "../assets/menu/pasteis/frango.png";
+import banana from "../assets/menu/pasteis/banana.png";
 
 // Importe as imagens para os lanches
 import misto from "../assets/menu/lanches/misto.png";
@@ -32,6 +33,7 @@ export const menuItems = {
         { id: 'pc1', name: 'Pastel de Carne', image: carne, description: 'Delicioso pastel de carne moída bem temperada.' },
         { id: 'pq1', name: 'Pastel de Queijo', image: queijo, description: 'Queijo derretido por dentro, crocante por fora.' },
         { id: 'pf1', name: 'Pastel de Frango', image: frango, description: 'Frango desfiado saboroso' },
+        { id: 'pf1', name: 'Pastel de Banana', image: banana, description: 'Pastel Doce Delicioso, podemos adicionar Açucar e Canela!' },
         // Adicione mais pasteis conforme necessário
     ],
     snacks: [
