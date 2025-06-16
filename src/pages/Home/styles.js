@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../assets/others/background.jpg";
+import background from "../../assets/others/background.png";
 import background2 from "../../assets/others/background2.jpg";
 
 // #95261B;
