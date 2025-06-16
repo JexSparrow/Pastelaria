@@ -77,9 +77,9 @@ export const CustomSwiperContainer = styled.div`
         margin: 0;
         font-size: 1em;
         color: ${({ theme }) => theme.colors.amarelo || '#FFD700'};
-        white-space: nowrap; /* Evita quebra de linha para nomes curtos */
-        overflow: hidden; /* Esconde o excesso se a linha for muito longa */
-        text-overflow: ellipsis; /* Adiciona '...' se o texto for cortado */
+        
+       
+       
     }
 
     .swiper-slide p {
