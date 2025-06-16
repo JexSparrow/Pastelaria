@@ -49,13 +49,13 @@ export const Box2 = styled.div`
 background-color: black;
 display: flex;
 flex-direction: column;
-padding: 0 30px;
+padding: 0 5%;
 gap: 20px;
 `;
 
 export const SubTitle = styled.h2`
 
-font-size: 50px;
+font-size: 52px;
 color: ${({ theme }) => theme.colors.amarelo};
 
  text-shadow: 1px 1px 1px rgba(255, 174, 0, 0.47); 
@@ -67,7 +67,7 @@ letter-spacing: 2px;
 
 
 export const Paragrafo = styled.p`
-font-size: 40px;
+font-size: 36px;
 font-family: Cookie;
 text-align: justify;
 color: aliceblue;

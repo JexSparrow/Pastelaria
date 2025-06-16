@@ -19,7 +19,7 @@ function Services() {
                     </Wrapper2>
 
                     <Wrapper2>
-                        <SubTitle>Lanches & Salgados</SubTitle>
+                        <SubTitle>Lanches e Salgados</SubTitle>
                         {/* Carrossel de Lanches (com reverseScroll: true) */}
                         <MenuCarousel items={menuItems.snacks} reverseScroll={true} />
                     </Wrapper2>

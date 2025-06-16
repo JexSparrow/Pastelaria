@@ -65,24 +65,36 @@ export const Endereco = styled.h3`
   font-family: Lobster;
   letter-spacing: 3px;
   color: #fff;
+  text-align: center;
 `;
 
 export const Descricao = styled.p`
   font-size: 32px;
   font-family: Lobster;
   color: #fff;
+  text-align: center;
 `;
 
 export const Horario = styled.p`
   font-size: 36px;
   font-family: Lobster;
   color: rgb(203, 29, 13);
+  margin: 0 auto;
 `;
 
 export const Link = styled.a`
   font-size: 30px;
   font-family: Lobster;
   color: ${({ theme }) => theme.colors.amarelo};
+  text-decoration: none;
+  transition: 300ms all ease-in-out;
+  margin: 0 auto;
+  text-align: left;
+
+  &:hover {
+    scale: 1.1;
+   
+  }
 `;
 
 export const SwiperCustomStyles = styled.div`
