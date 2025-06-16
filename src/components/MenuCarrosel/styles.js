@@ -87,7 +87,7 @@ export const CustomSwiperContainer = styled.div`
         margin-top: 5px;
         color: #ccc;
         line-height: 1.2;
-        max-height: 2.4em; /* Limita a descrição a 2 linhas */
+        max-height: 3.5em; /* Limita a descrição a 2 linhas */
         overflow: hidden;
         text-overflow: ellipsis;
     }

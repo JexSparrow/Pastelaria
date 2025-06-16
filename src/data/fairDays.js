@@ -1,6 +1,17 @@
-import img1 from "../assets/others/img1.jpg";
-import img2 from "../assets/others/img2.jpg";
-import img3 from "../assets/others/img3.jpg";
+
+const tercaImages = import.meta.glob('../assets/Feiras/terca/*.{jpg,jpeg,png,gif}', { eager: true, query: '?url', import: 'default' });
+const quintaImages = import.meta.glob('../assets/Feiras/quinta/*.{jpg,jpeg,png,gif}', { eager: true, query: '?url', import: 'default' });
+const sextaImages = import.meta.glob('../assets/Feiras/sexta/*.{jpg,jpeg,png,gif}', { eager: true, query: '?url', import: 'default' });
+const sabadoImages = import.meta.glob('../assets/Feiras/sabado/*.{jpg,jpeg,png,gif}', { eager: true, query: '?url', import: 'default' });
+const domingoImages = import.meta.glob('../assets/Feiras/domingo/*.{jpg,jpeg,png,gif}', { eager: true, query: '?url', import: 'default' });
+
+// Função para converter o objeto de importação em um array de URLs
+
+const getImagesArray = (imageModule) => {
+
+    return Object.values(imageModule);
+
+};
 
 
 
@@ -10,50 +21,49 @@ export const fairDays = [
     {
         id: 'terca',
         title: 'Terça-feira',
-        address: 'Rua da Feira, 123 - Centro',
-        openingHours: 'Das 17:00 às 22:00',
-        description: 'Feira noturna com diversas opções de comida e artesanato local.',
-        mapLink: 'https://maps.app.goo.gl/link-do-mapa-terca', // Substitua
-        images: [img1, img2, img3],
+        address: 'Rua Nunes Machado esq. Engenheiro Rebouças - Centro',
+        openingHours: 'Das 7:00 às 11:30',
+        description: 'Feira Orgânica e Convencional próxima a praça Ouvidor Pardinho. ',
+        mapLink: 'https://maps.app.goo.gl/2BU4oTyhR4GxUUJj9',
+        images: getImagesArray(tercaImages),
         layout: 'reverse'
     },
     {
         id: 'quinta',
         title: 'Quinta-feira',
-        address: 'Praça da Matriz, S/N',
-        openingHours: 'Das 8:00 às 14:00',
-        description: 'Feira tradicional com produtos frescos direto dos produtores rurais.',
-        mapLink: 'https://maps.app.goo.gl/link-do-mapa-quinta', // Substitua
-        images: [img1, img2, img3],
-
+        address: 'Rua Colombo esq. Ricardo Lemos - Ahu',
+        openingHours: 'Das 7:00 às 11:30',
+        description: 'Feira tradicional De produtos locais a delícias artesanais, cada visita é uma celebração da comunidade.',
+        mapLink: 'https://maps.app.goo.gl/CbmDU624YtnA3apU8',
+        images: getImagesArray(quintaImages)
     },
     {
         id: 'sexta',
         title: 'Sexta-feira',
-        address: 'Avenida Principal, 456 - Bairro Novo',
-        openingHours: 'Das 9:00 às 15:00',
-        description: 'Feira gastronômica com food trucks e especialidades regionais.',
-        mapLink: 'https://maps.app.goo.gl/link-do-mapa-sexta', // Substitua
-        images: [img1, img2, img3],
+        address: 'Rua Brasílio Itiberê esq. Rua Cel. Dulcídio - Água Verde',
+        openingHours: 'Das 7:00 às 11:30',
+        description: 'Feira Orgânica e Convencional localizada próxima a Ligga Arena',
+        mapLink: 'https://maps.app.goo.gl/vDzjjv6ePfyx48f79',
+        images: getImagesArray(sextaImages),
         layout: 'reverse'
     },
     {
         id: 'sabado',
         title: 'Sábado',
-        address: 'Rua Alberto Bolinger, 244',
-        openingHours: 'Das 7:30 até 13:00',
-        description: 'Feira localizada próxima ao Estádio Couto Pereira. Perfeita para você e sua família!',
-        mapLink: 'https://maps.app.goo.gl/link-do-mapa-sabado', // Substitua pelo link real do Google Maps
-        images: [img1, img2, img3]
+        address: 'Rua Alberto Bolinger esq. Rua Simão Bolívar',
+        openingHours: 'Das 7:00 até 13:00',
+        description: 'Feira Tradicional localizada próxima ao Estádio Couto Pereira. Perfeita para você e sua família!',
+        mapLink: 'https://maps.app.goo.gl/68Wp2qC7C5xCvkJ8A',
+        images: getImagesArray(sabadoImages)
     },
     {
         id: 'domingo',
         title: 'Domingo',
-        address: 'Parque Central, Entrada 2',
-        openingHours: 'Das 8:00 às 16:00',
-        description: 'Feira de artesanato e antiguidades, ideal para um passeio em família.',
-        mapLink: 'https://maps.app.goo.gl/link-do-mapa-domingo', // Substitua
-        images: [img1, img2, img3],
+        address: 'Rua Francisco Nunes, 266 - Prado Velho',
+        openingHours: 'Das 7:00 às 11:00',
+        description: 'Feira Orgânica e Convencional localizada próxima ao Teatro Paiol',
+        mapLink: 'https://maps.app.goo.gl/rg73UmJcEHc2LRiq7',
+        images: getImagesArray(domingoImages),
         layout: 'reverse'
     }
 ];

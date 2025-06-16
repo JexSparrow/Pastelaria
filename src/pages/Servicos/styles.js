@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
-    background-color:  ${({ theme }) => theme.colors.amarelo};
+    background-color: black;
+    padding: 3% 0;
+    
 `;
 
 export const Wrapper = styled.div`

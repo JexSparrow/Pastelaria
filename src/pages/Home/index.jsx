@@ -10,7 +10,7 @@ function Home() {
     // Configura um intervalo para alternar a imagem a cada 5 segundos (5000ms)
     const interval = setInterval(() => {
       setShowFirstImage(prev => !prev); // Alterna o valor de true para false e vice-versa
-    }, 5000); // 5 segundos
+    }, 3000); // 3 segundos
 
     // Limpa o intervalo quando o componente é desmontado para evitar vazamentos de memória
     return () => clearInterval(interval);
