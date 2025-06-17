@@ -75,7 +75,8 @@ export const CustomSwiperContainer = styled.div`
 
     .swiper-slide h4 {
         margin: 0;
-        font-size: 1em;
+        font-size: 1.5em;
+        font-family: Lobster;
         color: ${({ theme }) => theme.colors.amarelo || '#FFD700'};
         
        
@@ -83,11 +84,14 @@ export const CustomSwiperContainer = styled.div`
     }
 
     .swiper-slide p {
-        font-size: 0.8em;
-        margin-top: 5px;
+        font-size: 0.9em;
+       font-family: 'Chocolate Classical Sans';
+        font-weight: 600;
+        word-spacing: 3px;
+        margin-top: 8px;
         color: #ccc;
         line-height: 1.2;
-        max-height: 3.5em; /* Limita a descrição a 2 linhas */
+        
         overflow: hidden;
         text-overflow: ellipsis;
     }
