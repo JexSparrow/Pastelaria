@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Conteiner = styled.div`
 height: 100%;
 display: flex;
+position: relative;
 
 justify-content: center;
 border-top: 5px solid ${({ theme }) => theme.colors.amarelo};
@@ -65,4 +66,18 @@ font-size: 24px;
 font-family: lobster;
 color: aliceblue;
 text-align: center;
+`;
+
+export const Arrow = styled.a`
+position: absolute;
+width: 50px;
+left: 1%;
+bottom: 5%;
+
+transition: 300ms all ease-in-out;
+
+&:hover {
+  scale: 1.1;
+ 
+}
 `;

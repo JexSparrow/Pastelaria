@@ -9,7 +9,7 @@ function About() {
             <Conteiner>
                 <Wrapper>
                     <Box1>
-                        <Title>Nossa História</Title>
+                        <Title id='About'>Nossa História</Title>
                         <Logo src={logo2} />
 
                     </Box1>

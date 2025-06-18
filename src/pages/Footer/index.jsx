@@ -1,13 +1,14 @@
 
-import { Conteiner, Img, Logo, Paragrafo, Wrapper1, Wrapper2 } from "./styles"
+import { Arrow, Conteiner, Img, Logo, Paragrafo, Wrapper1, Wrapper2 } from "./styles"
 import logo2m from "../../assets/others/logo2m.png";
 import insta from "../../assets/others/insta.png";
 import whats from "../../assets/others/whats.png";
+import arrow from '../../assets/others/arrow.svg'
 
 function Footer() {
     return (
         <>
-            <Conteiner>
+            <Conteiner id='Contato'>
                 <Wrapper1>
                     <Logo src={logo2m} />
                     <Paragrafo>Entregando sabor e momentos inesquecíveis desde 1988</Paragrafo>
@@ -27,6 +28,18 @@ function Footer() {
                     </div>
 
                 </Wrapper2>
+
+                <Arrow
+                    href="#Home"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                >
+                    <img src={arrow} alt="Voltar ao topo" />
+                </Arrow>
+
+
             </Conteiner>
         </>
     )

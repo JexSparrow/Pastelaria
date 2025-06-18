@@ -27,10 +27,10 @@ function Home() {
         <Logo src={logo} />
         <Header>
           <div>
-            <Link>Home</Link>
-            <Link>Sobre Nós</Link>
-            <Link>Atedimento</Link>
-            <Link>Contato</Link>
+            <Link id='Home'>Home</Link>
+            <Link href='#About'>Sobre Nós</Link>
+            <Link href='#Feiras'>Atedimento</Link>
+            <Link href='#Contato'>Contato</Link>
           </div>
         </Header>
 

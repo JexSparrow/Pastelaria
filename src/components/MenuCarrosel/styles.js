@@ -90,10 +90,10 @@ export const CustomSwiperContainer = styled.div`
         word-spacing: 3px;
         margin-top: 8px;
         color: #ccc;
-        line-height: 1.2;
+        line-height: 1.4;
         
         overflow: hidden;
-        text-overflow: ellipsis;
+        
     }
 
     /* Remover estilos de paginação e navegação se não forem mais necessários */

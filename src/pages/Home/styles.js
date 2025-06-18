@@ -25,7 +25,7 @@ export const BackgroundOverlay = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.4); /* Mantenha o filtro de brilho na imagem base */
+    filter: brightness(0.3); /* Mantenha o filtro de brilho na imagem base */
     transition: opacity 1s ease-in-out; /* Transição suave para a opacidade */
     opacity: ${({ $showFirstImage }) => ($showFirstImage ? 1 : 0)}; /* Opacidade controlada por prop */
   }
@@ -40,6 +40,8 @@ export const BackgroundOverlay = styled.div`
     height: 100%;
     background-image: url(${background2});
     background-size: cover;
+    background-position: center;
+    
     
     background-repeat: no-repeat;
     filter: brightness(0.4); /* Mantenha o filtro de brilho na segunda imagem também */
@@ -54,8 +56,10 @@ export const Conteiner = styled.div`
   position: relative; 
   width: 100%;
   height: 75vh;
+  
  
   background-color: transparent;
+ box-shadow: 1px -10px 10px 5px rgb(0, 0, 0) inset;
 
 `;
 
@@ -80,8 +84,9 @@ export const Header = styled.header`
 
   div { 
 
-background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba(255, 4, 4, 0.45);
+background: rgba(210, 22, 22, 0.25);
+
+box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
 backdrop-filter: blur( 3px );
 
 border-radius: 25px;
@@ -89,20 +94,29 @@ border-radius: 25px;
     gap: 35px;
     height: auto;
     padding: 15px 30px ;
+    transition: 300ms all ease-in-out;
+
+    &:hover {
+
+      box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.45);
+
+    }
   }
 `;
 
 export const Link = styled.a`
   /* Mantenha seus estilos do Link */
-  color: #fff;
-  font-weight: 600;
+  color: ${({ theme }) => theme.colors.amarelo};
+  font-family: 'Lobster';
+  font-weight: 500;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
   transition: 300ms all ease-in-out;
+  
 
   &:hover {
     scale: 1.1;
-    color: ${({ theme }) => theme.colors.amarelo};
+    color: aliceblue;
   }
   z-index: 1; 
 `;
@@ -125,8 +139,9 @@ export const Title = styled.h1`
   font-family: Cookie;
   letter-spacing: 5px;
   color: ${({ theme }) => theme.colors.amarelo};
-  font-size: 10em;
-  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7); 
+  font-size: 11em;
+  line-height: 70%;
+  text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7); 
   z-index: 1;
 `;
 

@@ -61,14 +61,14 @@ export const menuItems = {
         { name: 'Queijo', image: queijo, description: 'Recheio farto de Queijo Mussarela derretido e crocante por fora.' },
         { name: 'Palmito', image: palmito, description: 'Palmito Fresco Temperado e cremoso, um clássico da feira.' },
         { name: 'Calabresa com Queijo', image: calabresa, description: 'Calabresa fatiada e temperada com queijo, sabor intenso.' },
-        { name: 'Chocolate', image: chocolate, description: 'Doce tentação com chocolate ao leite cremoso.' },
+        { name: 'Chocolate', image: chocolate, description: 'Chocolate ao leite cremoso. Temos opção de adicionar Açúcar e Canela' },
         { name: 'Banana', image: banana, description: 'Banana caramelizada! Temos opção de adicionar Açúcar e Canela' },
     ],
     // Adicione mais pasteis conforme necessário
 
     snacks: [
         { name: 'Pão com Bife', image: paobife, description: 'Bife com Queijo Derretido e suculento feito na chapa, uma delícia!' },
-        { name: 'Pão com Frango', image: paofrango, description: 'Peito de Frango  Temperado com Queijo feito na chapa, uma opção mais fit' },
+        { name: 'Pão com Frango', image: paofrango, description: 'Peito de Frango Temperado com Queijo feito na chapa, uma opção mais fit' },
         { name: 'Queijo Quente', image: queijoquente, description: 'Pão na chapa com queijo derretido.' },
         { name: 'Misto Quente', image: misto, description: 'Tradicional pão na chapa com queijo e presunto.' },
         { name: 'Pão com Ovo', image: paoovo, description: 'Simples e Saboroso. Com opção de adcionar queijo' },
@@ -85,18 +85,17 @@ export const menuItems = {
         { name: 'Coca Zero', image: cocazero, description: 'Refrigerante Zero Açucar, uma opção mais saudável!' },
         { name: 'Guaraná Antártica', image: guarana, description: 'Refrigerante tradicional para acompanhar seu lanche!' },
         { name: 'Guaraná Zero', image: guaranazero, description: 'Refrigerante Zero Açucar, uma opção mais saudável!' },
-        { name: 'Sprite 🏳️‍🌈', image: sprite, description: 'VOCÊS TRABALHAM COM SPRITE? Refrigerante preferido do Matheus!' },
-        { name: 'Fanta Laranja', image: fanta, description: 'Refrigerante Tradicional nostálgico' },
-        { name: 'Fanta Uva', image: fantauva, description: 'Refrigerante Tradicional que ninguém toma...' },
-        { name: 'Tônica', image: tonica, description: 'Refrigerante Refrescante que só o Tio Paulo bebe...' },
+        { name: 'Sprite', image: sprite, description: 'Refrigerante tradicional para acompanhar seu lanche' },
+        { name: 'Fanta Laranja', image: fanta, description: 'Refrigerante Tradicional sabor Laranja' },
+        { name: 'Fanta Uva', image: fantauva, description: 'Refrigerante Tradicional sabor Uva' },
+        { name: 'Tônica', image: tonica, description: 'Refrigerante Refrescante, com um leve toque amargo' },
         { name: 'Sucos Del Valle', image: delvalle, description: 'Sucos de Latinha. Consultar sabores disponíveis!' },
         { name: 'Água da Serra', image: laranjinha, description: 'A clássica Laranjinha refrescante! Temos a opção de Framboesa também' },
-        { name: 'Chocomilk', image: chocomilk, description: 'O lendário Achocolatado da Família Brasileira!' },
-        { name: 'Cafézin', image: cafe, description: 'Café aleatório do dia, as vezes fraco e muito doce, boa sorte!' },
-
-        { name: 'Pingadão da Massa', image: cafeleite, description: 'Café com leite para começar bem o dia!' },
+        { name: 'Chocomilk', image: chocomilk, description: 'O lendário achocolatado delicioso' },
+        { name: 'Café', image: cafe, description: 'Café Preto perfeito para começar o dia. Temos a opção Sem açúcar' },
+        { name: 'Pingado', image: cafeleite, description: 'Café com leite para começar bem o dia! Temos a opção Sem açúcar' },
         { name: 'Chocolate Quente', image: nescau, description: 'Nescauzão quentinho pra adoçar sua vida!' },
-        { name: 'Água Mineral', image: agua, description: 'Escolha entre Natural ou com Gás. Para hidratar!' },
+        { name: 'Água Mineral', image: agua, description: 'Escolha entre Natural ou com Gás. Perfeita para hidratar!' },
         // Adicione mais bebidas
     ]
 };
