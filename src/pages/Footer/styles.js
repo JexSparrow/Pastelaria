@@ -53,19 +53,34 @@ export const Img = styled.img`
     scale: 0.9;
 
 }
+
+@media  (max-width:800px) {
+    width: 40px;
+    
+  }
     
 `;
 
 export const Logo = styled.img`
 width: 240px;
 
+@media  (max-width:800px) {
+    width: 180px;
+    
+  }
+
 `;
 
 export const Paragrafo = styled.p`
-font-size: 24px;
+font-size: 1.5em;
 font-family: lobster;
 color: aliceblue;
 text-align: center;
+
+@media  (max-width:800px) {
+    font-size: 1.25em;
+    
+  }
 `;
 
 export const Arrow = styled.a`
@@ -80,4 +95,9 @@ transition: 300ms all ease-in-out;
   scale: 1.1;
  
 }
+
+@media  (max-width:800px) {
+    width: 40px;
+    
+  }
 `;

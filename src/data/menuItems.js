@@ -92,8 +92,8 @@ export const menuItems = {
         { name: 'Sucos Del Valle', image: delvalle, description: 'Sucos de Latinha. Consultar sabores disponíveis!' },
         { name: 'Água da Serra', image: laranjinha, description: 'A clássica Laranjinha refrescante! Temos a opção de Framboesa também' },
         { name: 'Chocomilk', image: chocomilk, description: 'O lendário achocolatado delicioso' },
-        { name: 'Café', image: cafe, description: 'Café Preto perfeito para começar o dia. Temos a opção Sem açúcar' },
-        { name: 'Pingado', image: cafeleite, description: 'Café com leite para começar bem o dia! Temos a opção Sem açúcar' },
+        { name: 'Café', image: cafe, description: 'Café Preto perfeito para começar o dia. Temos a opção Sem Açúcar' },
+        { name: 'Pingado', image: cafeleite, description: 'Café com leite para começar bem o dia! Temos a opção Sem Açúcar' },
         { name: 'Chocolate Quente', image: nescau, description: 'Nescauzão quentinho pra adoçar sua vida!' },
         { name: 'Água Mineral', image: agua, description: 'Escolha entre Natural ou com Gás. Perfeita para hidratar!' },
         // Adicione mais bebidas

@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   padding: 0 5%;
   background-color: black;
   height: 100%;
+  gap: 10px;
 
   ${({ layoutDirection }) =>
     layoutDirection === "reverse" &&
@@ -26,10 +27,21 @@ export const Wrapper = styled.div`
         flex-direction: column;
         align-items: center;
     `}
+
+      @media (max-width: 1250px){
+   padding: 0 2%;
+
+    @media (max-width: 900px){
+    gap: 2%;
+    
+
+  }
+
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 82px;
+  font-size: 5em;
   font-family: Lobster;
   letter-spacing: 1px;
   text-align: center;
@@ -49,6 +61,16 @@ export const Title = styled.h2`
         text-align: right;
         padding-right: 2%;
     `}
+
+      @media (max-width: 1250px){
+    font-size: 4.5em;
+
+  }
+
+  @media (max-width: 900px){
+    font-size: 4em;
+
+  }
 `;
 
 export const BoxTexto = styled.div`
@@ -58,32 +80,68 @@ export const BoxTexto = styled.div`
   flex-direction: column;
   padding: 2% 0;
   justify-content: space-evenly;
+
+    @media (max-width: 1250px){
+    width: 57%;
+  }
+
+  @media (max-width: 900px){
+    width: 60%;
+    justify-content: space-between;
+
+  }
 `;
 
 export const Endereco = styled.h3`
-  font-size: 42px;
+  font-size: 3em;
   font-family: Lobster;
   letter-spacing: 3px;
   color: #fff;
   text-align: center;
+
+   @media (max-width: 1250px){
+    font-size: 2.5em;
+
+  }
+
+  @media (max-width: 900px){
+    font-size: 2em;
+
+  }
 `;
 
 export const Descricao = styled.p`
-  font-size: 32px;
+  font-size: 1.8em;
   font-family: Lobster;
   color: #fff;
-  text-align: center;
+
+    @media (max-width: 1250px){
+    font-size: 1.5em;
+    text-align: center;
+
+  }
+
 `;
 
 export const Horario = styled.p`
-  font-size: 36px;
+  font-size: 2.5em;
   font-family: Lobster;
   color: rgb(203, 29, 13);
   margin: 0 auto;
+
+    @media (max-width: 1250px){
+    font-size: 2em;
+
+  }
+
+  @media (max-width: 900px){
+    font-size: 1.5em;
+
+  }
 `;
 
 export const Link = styled.a`
-  font-size: 30px;
+  font-size: 2em;
   font-family: Lobster;
   color: ${({ theme }) => theme.colors.amarelo};
   text-decoration: none;
@@ -95,6 +153,12 @@ export const Link = styled.a`
     scale: 1.1;
    
   }
+
+  @media (max-width: 900px){
+    font-size: 1.5em;
+
+  }
+
 `;
 
 export const SwiperCustomStyles = styled.div`
@@ -135,11 +199,23 @@ export const SwiperCustomStyles = styled.div`
 
 export const SwiperWrapper = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   background-color: black;
+
+  @media (max-width: 1250px){
+    max-width: 450px;
+    margin: auto;
+
+  }
+
+   @media (max-width: 900px){
+    max-width: 360px;
+    margin: auto;
+
+  }
 
 `;

@@ -7,7 +7,7 @@ export const Conteiner = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.colors.red}; /* Cor de debug, considere mudar */
+    background-color: ${({ theme }) => theme.colors.red};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,18 +18,33 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-size: 102px;
-font-family: Cookie;
-color: ${({ theme }) => theme.colors.amarelo};
-text-shadow: 1px 1px 4px black;
-   
-    /* Exemplo: */
-    /* font-size: 5rem; */
-    /* @media (max-width: 768px) { font-size: 3rem; } */
+    font-size: 7em;
+    font-family: Cookie;
+    color: ${({ theme }) => theme.colors.amarelo};
+    text-shadow: 1px 1px 4px black;
+
+      @media (max-width: 1250px){
+    font-size: 6em;
+
+  }
+
+`;
+
+export const Paragrafo = styled.p`
+    font-size: 2em; /* Considere usar rem/em para responsividade */
+    font-family: Lobster;
+    letter-spacing: 1px;
+    padding-bottom: 1%;
+    color: aliceblue;
+
+      @media (max-width: 1250px){
+    font-size: 1.5em;
+
+  }
 `;
 
 export const SubTitle = styled.h3`
-    font-size: 76px;
+    font-size: 4em;
     letter-spacing: 1px;
     text-shadow: 1px 3px 4px rgba(255,0,0,1);
     font-style: italic;
@@ -37,49 +52,63 @@ export const SubTitle = styled.h3`
     color: ${({ theme }) => theme.colors.amarelo};
     padding: 5% 0;
     
-    /* Exemplo: */
-    /* font-size: 5rem; */
-    /* @media (max-width: 768px) { font-size: 3rem; } */
+    @media (max-width: 1250px){
+    font-size: 3.5em;
+
+  }
 `;
 
-export const Paragrafo = styled.p`
-    font-size: 30px; /* Considere usar rem/em para responsividade */
-    font-family: Lobster;
-    letter-spacing: 1px;
-    padding-bottom: 1%;
-    color: aliceblue;
-`;
+
 
 export const Conteiner2 = styled.div`
     background-color: black; /* Cor de debug, considere mudar */
     display: grid;
-    /* Usar 1fr distribui o espaço disponível igualmente após os gaps */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Ajuste o gap conforme necessário, em pixels ou rem/em */
 
-    /* Altura total do contêiner, use com cautela ou com box-sizing: border-box; */
-    /* height: 100vh; */ /* Removi o height: 100vh aqui, pois pode causar scroll indesejado com padding */
+    grid-template-columns: repeat(3, 1fr);
+   
     padding: 1%; /* Certifique-se de que box-sizing: border-box; esteja ativado globalmente */
 
     align-items: start; /* Alinha os itens ao topo das células do grid */
     justify-content: center; /* Centraliza os itens horizontalmente se houver espaço */
 
-    @media (max-width: 1024px) { /* Exemplo de breakpoint para tablets */
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
-    }
+       @media (max-width: 1250px){
+         
 
-    @media (max-width: 768px) { /* Exemplo de breakpoint para celulares */
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-    }
-`;
+  }
+
+  @media (max-width: 1024px) {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  .bebidas {
+    justify-self: center;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 850px){
+  .lanches { font-size: 2.75em; }
+}
+
+@media (max-width: 720px) {
+  grid-template-columns: 1fr;
+
+  .bebidas {
+    grid-column: auto;
+    justify-self: center;
+  }
+}`
+
 
 export const Wrapper2 = styled.div`
     background-color: black; /* Cor de debug, considere mudar */
-    padding: 20px; /* Padding interno para o conteúdo de cada item */
+    padding: 16px; /* Padding interno para o conteúdo de cada item */
    
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza o título e o carrossel */
     justify-content: flex-start; /* Alinha o conteúdo ao topo */
     text-align: center;
+
+    
 `;

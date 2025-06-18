@@ -64,20 +64,36 @@ export const CustomSwiperContainer = styled.div`
     }
 
     .swiper-slide img {
-        width: 120px; /* Tamanho da imagem no slide */
-        height: 120px;
+        width: 140px; /* Tamanho da imagem no slide */
+        height: 140px;
         object-fit: cover;
         padding: 2%;
         border-radius: 50%; /* Imagens redondas */
         margin-bottom: 8px; /* Espaço entre imagem e texto */
         border: 4px solid ${({ theme }) => theme.colors.amarelo || '#FFD700'}; /* Borda na imagem */
+
+        
+
+      @media (max-width: 1250px){
+         width: 120px; /* Tamanho da imagem no slide */
+        height: 120px;
+
+  }
+
     }
 
     .swiper-slide h4 {
         margin: 0;
-        font-size: 1.5em;
+        font-size: 1.5em; /* Sabores */
         font-family: Lobster;
         color: ${({ theme }) => theme.colors.amarelo || '#FFD700'};
+
+        @media (max-width: 1250px){
+
+            font-size: 1.25em;
+         
+
+  }
         
        
        
@@ -93,6 +109,12 @@ export const CustomSwiperContainer = styled.div`
         line-height: 1.4;
         
         overflow: hidden;
+
+           @media (max-width: 1250px){
+         font-size: 0.8em;
+         padding: 0 10%;
+
+  }
         
     }
 

@@ -55,11 +55,16 @@ export const BackgroundOverlay = styled.div`
 export const Conteiner = styled.div`
   position: relative; 
   width: 100%;
-  height: 75vh;
+  height: 85vh;
   
  
   background-color: transparent;
  box-shadow: 1px -10px 10px 5px rgb(0, 0, 0) inset;
+
+ @media (max-width: 900px){
+    height: 70vh;
+
+  }
 
 `;
 
@@ -68,6 +73,17 @@ export const Logo = styled.img`
   top: -60px;
   height: 220px;
   z-index: 1; 
+
+   @media  (max-width:1050px) {
+    height: 150px;
+    top: -35px;
+    
+  }
+
+  @media  (max-width:750px) {
+    display: none;
+    
+  }
 `;
 
 export const Header = styled.header`
@@ -75,7 +91,7 @@ export const Header = styled.header`
 
 
   top: 0px;
- height: auto;
+  height: auto;
   width: 100%;
   padding: 10px 0;
   display: flex;
@@ -119,6 +135,11 @@ export const Link = styled.a`
     color: aliceblue;
   }
   z-index: 1; 
+
+   @media  (max-width:1035px) {
+    font-size: 1.5em;
+    
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -136,13 +157,23 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: Cookie;
-  letter-spacing: 5px;
+  font-family: Norican;
+ 
   color: ${({ theme }) => theme.colors.amarelo};
-  font-size: 11em;
-  line-height: 70%;
+  font-size: 10em;
+  line-height: 90%;
   text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7); 
   z-index: 1;
+
+  @media  (max-width:1050px) {
+    font-size: 8em;
+    
+  }
+
+   @media  (max-width:900px) {
+    font-size: 6.5em;
+    
+  }
 `;
 
 export const Paragrafo = styled.p`
@@ -153,4 +184,9 @@ export const Paragrafo = styled.p`
   font-size: 4em;
   text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7); /* Adiciona sombra para melhor legibilidade */
   z-index: 1; /* Garante que o parágrafo fique acima do overlay */
+
+   @media  (max-width:1035px) {
+    font-size: 3em;
+    
+  }
 `;

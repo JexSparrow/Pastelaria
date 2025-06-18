@@ -13,18 +13,18 @@ function Services() {
 
                 <Conteiner2>
                     <Wrapper2>
-                        <SubTitle>Pastéis</SubTitle>
+                        <SubTitle className="pasteis">Pastéis</SubTitle>
                         {/* Carrossel de Pastéis (default: baixo para cima) */}
                         <MenuCarousel items={menuItems.pastels} />
                     </Wrapper2>
 
                     <Wrapper2>
-                        <SubTitle>Lanches e Salgados</SubTitle>
+                        <SubTitle className="lanches">Lanches e Salgados</SubTitle>
                         {/* Carrossel de Lanches (com reverseScroll: true) */}
                         <MenuCarousel items={menuItems.snacks} reverseScroll={true} />
                     </Wrapper2>
 
-                    <Wrapper2>
+                    <Wrapper2 className="bebidas">
                         <SubTitle>Bebidas</SubTitle>
                         {/* Carrossel de Bebidas (default: baixo para cima) */}
                         <MenuCarousel items={menuItems.drinks} />
