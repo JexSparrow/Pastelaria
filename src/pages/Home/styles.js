@@ -59,10 +59,16 @@ export const Conteiner = styled.div`
   
  
   background-color: transparent;
- box-shadow: 1px -10px 10px 5px rgb(0, 0, 0) inset;
+  box-shadow: 1px -10px 10px 5px rgb(0, 0, 0) inset;
+
 
  @media (max-width: 900px){
-    height: 70vh;
+    height: 65vh;
+
+  }
+
+  @media (max-width: 850px){
+    height: 45vh;
 
   }
 
@@ -117,6 +123,11 @@ border-radius: 25px;
       box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.45);
 
     }
+
+     @media  (max-width:550px) {
+    justify-content: space-evenly;
+    
+  }
   }
 `;
 
@@ -138,6 +149,11 @@ export const Link = styled.a`
 
    @media  (max-width:1035px) {
     font-size: 1.5em;
+    
+  }
+
+   @media  (max-width:550px) {
+    font-size: 1em;
     
   }
 `;
@@ -174,6 +190,16 @@ export const Title = styled.h1`
     font-size: 6.5em;
     
   }
+
+  @media  (max-width:700px) {
+    font-size: 5em;
+    
+  }
+
+  @media  (max-width:550px) {
+    font-size: 3em;
+    
+  }
 `;
 
 export const Paragrafo = styled.p`
@@ -187,6 +213,11 @@ export const Paragrafo = styled.p`
 
    @media  (max-width:1035px) {
     font-size: 3em;
+    
+  }
+
+     @media  (max-width:1035px) {
+    font-size: 2em;
     
   }
 `;

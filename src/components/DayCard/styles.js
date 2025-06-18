@@ -37,6 +37,11 @@ export const Wrapper = styled.div`
 
   }
 
+   @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   }
 `;
 
@@ -71,6 +76,12 @@ export const Title = styled.h2`
     font-size: 4em;
 
   }
+
+   @media (max-width: 550px){
+    font-size: 3em;
+    padding: 5% 0;
+
+  }
 `;
 
 export const BoxTexto = styled.div`
@@ -88,6 +99,13 @@ export const BoxTexto = styled.div`
   @media (max-width: 900px){
     width: 60%;
     justify-content: space-between;
+
+  }
+
+   @media (max-width: 550px){
+    width: 100%;
+    padding: 5%;
+    gap: 10px;
 
   }
 `;
@@ -108,6 +126,17 @@ export const Endereco = styled.h3`
     font-size: 2em;
 
   }
+
+   @media (max-width: 700px){
+    font-size: 1.5em;
+
+  }
+
+  @media (max-width: 550px){
+    font-size: 1.75em;
+    text-shadow: 1px 1px 1px ${({ theme }) => theme.colors.red};
+
+  }
 `;
 
 export const Descricao = styled.p`
@@ -118,6 +147,11 @@ export const Descricao = styled.p`
     @media (max-width: 1250px){
     font-size: 1.5em;
     text-align: center;
+
+  }
+
+  @media (max-width: 700px){
+    font-size: 1.25em;
 
   }
 
@@ -136,6 +170,11 @@ export const Horario = styled.p`
 
   @media (max-width: 900px){
     font-size: 1.5em;
+
+  }
+
+   @media (max-width: 550px){
+    font-size: 1.25em;
 
   }
 `;
@@ -215,6 +254,11 @@ export const SwiperWrapper = styled.div`
    @media (max-width: 900px){
     max-width: 360px;
     margin: auto;
+
+  }
+
+  @media (max-width: 700px){
+    max-width: 300px;
 
   }
 

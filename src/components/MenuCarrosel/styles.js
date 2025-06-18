@@ -80,6 +80,12 @@ export const CustomSwiperContainer = styled.div`
 
   }
 
+   @media (max-width: 700px){
+    width: 160px; /* Tamanho da imagem no slide */
+        height: 160px;
+
+  }
+
     }
 
     .swiper-slide h4 {
@@ -92,6 +98,11 @@ export const CustomSwiperContainer = styled.div`
 
             font-size: 1.25em;
          
+
+  }
+
+  @media (max-width: 700px){
+    font-size: 1.75em;
 
   }
         
@@ -113,6 +124,12 @@ export const CustomSwiperContainer = styled.div`
            @media (max-width: 1250px){
          font-size: 0.8em;
          padding: 0 10%;
+
+  }
+
+   @media (max-width: 700px){
+    font-size: 1em;
+    padding: 0 2%;
 
   }
         

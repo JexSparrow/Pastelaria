@@ -28,6 +28,16 @@ export const Title = styled.h2`
 
   }
 
+  @media (max-width: 700px){
+    font-size: 6.5em;
+
+  }
+
+  @media (max-width: 550px){
+    font-size: 5em;
+
+  }
+
 `;
 
 export const Paragrafo = styled.p`
@@ -39,6 +49,18 @@ export const Paragrafo = styled.p`
 
       @media (max-width: 1250px){
     font-size: 1.5em;
+
+  }
+
+  @media (max-width: 700px){
+    font-size: 1.25em;
+    text-align: center;
+
+  }
+
+  @media (max-width: 550px){
+    font-size: 1em;
+    line-height: 150%;
 
   }
 `;
@@ -56,6 +78,16 @@ export const SubTitle = styled.h3`
     font-size: 3.5em;
 
   }
+
+  @media (max-width: 700px){
+    font-size: 5em;
+
+  }
+
+    @media (max-width: 550px){
+    font-size: 6em;
+
+  }
 `;
 
 
@@ -71,10 +103,6 @@ export const Conteiner2 = styled.div`
     align-items: start; /* Alinha os itens ao topo das células do grid */
     justify-content: center; /* Centraliza os itens horizontalmente se houver espaço */
 
-       @media (max-width: 1250px){
-         
-
-  }
 
   @media (max-width: 1024px) {
   grid-template-columns: repeat(2, 1fr);
@@ -97,6 +125,13 @@ export const Conteiner2 = styled.div`
     grid-column: auto;
     justify-self: center;
   }
+
+  @media (max-width: 550px){
+  .lanches {
+     font-size: 4em;
+     line-height: 100%;
+         }
+}
 }`
 
 

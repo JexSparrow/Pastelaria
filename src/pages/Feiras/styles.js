@@ -19,4 +19,12 @@ text-shadow: 1px 1px 4px black;
     font-size: 6em;
 
   }
+
+  @media (max-width: 550px){
+    font-size: 3.5em;
+    padding: 5% 0;
+
+  }
+
+  
 `;

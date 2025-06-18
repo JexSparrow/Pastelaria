@@ -18,7 +18,11 @@ background-color: ${({ theme }) => theme.colors.amarelo};
   text-align: center;
   width: 100%;
   gap: 5px;
+
+    @media  (max-width:550px) {
+    grid-template-columns: auto;
     
+  }
 `;
 
 export const Box1 = styled.div`
@@ -27,6 +31,11 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
+
+@media  (max-width:550px) {
+    display: none;
+    
+  }
 
 `;
 
@@ -40,6 +49,11 @@ font-family: Norican;
 
  @media  (max-width:1035px) {
     font-size: 4em;
+    
+  }
+
+  @media  (max-width:700px) {
+    font-size: 2.5em;
     
   }
 
@@ -60,6 +74,12 @@ display: flex;
 flex-direction: column;
 padding: 0 5%;
 gap: 20px;
+
+@media  (max-width:550px) {
+    width: 100%;
+    padding-bottom: 5%;
+    
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -80,6 +100,18 @@ letter-spacing: 2px;
 
   @media  (max-width:900px) {
     font-size: 3.25em;
+    
+  }
+
+  @media  (max-width:700px) {
+    font-size: 2.5em;
+    
+  }
+
+  @media  (max-width:550px) {
+    font-size: 3em;
+    padding: 0 2%;
+    text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7); 
     
   }
 
@@ -105,6 +137,19 @@ letter-spacing: 2px;
   @media (max-width: 900px){
     font-size: 1em;
 
+  }
+
+    @media (max-width: 700px){
+    font-size: 0.85em;
+
+  }
+
+  @media  (max-width:550px) {
+    font-size: 1em;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7); 
+    
+    
   }
 
 
