@@ -50,7 +50,7 @@ export const fairDays = [
     {
         id: 'sabado',
         title: 'Sábado',
-        address: 'Rua Alberto Bolinger esq. Rua Simão Bolívar',
+        address: 'Rua Alberto Bolinger esq. Rua Simão Bolívar - Alto da Glória',
         openingHours: 'Das 7:00 até 13:00',
         description: 'Feira Tradicional localizada próxima ao Estádio Couto Pereira. Perfeita para você e sua família!',
         mapLink: 'https://maps.app.goo.gl/68Wp2qC7C5xCvkJ8A',
