@@ -86,11 +86,11 @@ export const Title = styled.h2`
 
 export const BoxTexto = styled.div`
   background-color: black;
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
-  padding: 2% 0;
   justify-content: space-evenly;
+  
 
     @media (max-width: 1250px){
     width: 57%;
@@ -98,7 +98,7 @@ export const BoxTexto = styled.div`
 
   @media (max-width: 900px){
     width: 60%;
-    justify-content: space-between;
+    
 
   }
 
@@ -144,10 +144,12 @@ export const Descricao = styled.p`
   font-family: Lobster;
   color: #fff;
   white-space: pre-line;
+  text-align: center;
+  
 
     @media (max-width: 1250px){
     font-size: 1.5em;
-    text-align: center;
+    
 
   }
 
@@ -203,7 +205,7 @@ export const Link = styled.a`
 
 export const SwiperCustomStyles = styled.div`
   .swiper-slide {
-    height: 100% !important;
+    height: 100% !important; //proporção das imagens 4:3
   }
 
    .swiper-button-prev,
@@ -235,13 +237,17 @@ export const SwiperCustomStyles = styled.div`
   .swiper-pagination-bullets {
     bottom: 10px;
   }
+
+
 `;
 
 export const SwiperWrapper = styled.div`
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   
-  margin: 0 auto;
+  
+  
+  margin: auto;
   border-radius: 8px;
   overflow: hidden;
   background-color: black;
@@ -259,7 +265,14 @@ export const SwiperWrapper = styled.div`
   }
 
   @media (max-width: 700px){
-    max-width: 300px;
+    max-width: 280px;
+
+  }
+
+  @media (max-width: 550px){
+    max-width: 320px;
+    padding: 0 3%;
+
 
   }
 

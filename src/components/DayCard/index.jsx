@@ -80,7 +80,12 @@ function DayCard({
                     <BoxTexto>
                         <Endereco>{address}</Endereco>
                         <Horario>{openingHours}</Horario>
-                        <Descricao>{description}</Descricao>
+
+                        <div>
+                            <Descricao>{description}</Descricao>
+
+                        </div>
+
                         <Link href={mapLink} target="_blank" rel="noopener noreferrer">
                             Ver no Mapa
                         </Link>
