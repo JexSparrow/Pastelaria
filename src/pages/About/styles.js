@@ -171,7 +171,8 @@ letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7); 
     letter-spacing: 1px;
     padding: 0 2%;
-    
+    text-align: center;
+    word-spacing: 0;
     
   }
 
