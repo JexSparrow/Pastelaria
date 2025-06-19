@@ -166,9 +166,11 @@ letter-spacing: 2px;
   }
 
   @media  (max-width:550px) {
-    font-size: 1em;
+    font-size: 1.1em;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7); 
+    letter-spacing: 1px;
+    padding: 0 2%;
     
     
   }
