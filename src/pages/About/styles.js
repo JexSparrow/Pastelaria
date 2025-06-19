@@ -7,6 +7,10 @@ display: flex;
 justify-content: center;
 padding: 2%;
 
+@media (max-width: 550px){
+  padding: 0;
+}
+
 `;
 
 export const Wrapper = styled.div`
@@ -33,7 +37,10 @@ justify-content: space-between;
 align-items: center;
 
 @media  (max-width:550px) {
-    display: none;
+
+    background-color: ${({ theme }) => theme.colors.red};
+    border-top: 5px solid ${({ theme }) => theme.colors.amarelo};
+    
     
   }
 
@@ -57,6 +64,14 @@ font-family: Norican;
     
   }
 
+  @media  (max-width:550px) {
+    padding: 3% 0;
+   
+    
+  }
+
+
+
 `;
 
 export const Logo = styled.img`
@@ -64,6 +79,11 @@ width: 66%;
 
 @media  (max-width:1035px) {
     width: 90%;
+    
+  }
+
+  @media  (max-width:550px) {
+    display: none;
     
   }
 `;
@@ -77,7 +97,7 @@ gap: 20px;
 
 @media  (max-width:550px) {
     width: 100%;
-    padding-bottom: 5%;
+    padding: 5%;
     
   }
 `;
@@ -112,6 +132,7 @@ letter-spacing: 2px;
     font-size: 3em;
     padding: 0 2%;
     text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7); 
+    display: none;
     
   }
 

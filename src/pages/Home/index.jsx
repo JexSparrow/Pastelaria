@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Conteiner, BackgroundOverlay, Header, Link, Logo, Paragrafo, Title, Wrapper } from "./styles";
+import { Conteiner, BackgroundOverlay, Header, Link, Logo, Paragrafo, Title, Wrapper, HamburgerWrapper, MenuButton, MobileMenu } from "./styles";
 import logo from "../../assets/others/logo.png";
 
 function Home() {
@@ -15,6 +15,9 @@ function Home() {
     // Limpa o intervalo quando o componente é desmontado para evitar vazamentos de memória
     return () => clearInterval(interval);
   }, []); // O array vazio garante que o useEffect rode apenas uma vez (no montagem do componente)
+
+  const [isOpen, setIsOpen] = useState(false);
+
 
   return (
     <>
@@ -38,6 +41,20 @@ function Home() {
           <Title>Pastelaria Kulik</Title>
           <Paragrafo>Vem para a Feira!</Paragrafo>
         </Wrapper>
+
+        <HamburgerWrapper>
+          <MenuButton onClick={() => setIsOpen(!isOpen)}>
+            <span />
+            <span />
+            <span />
+          </MenuButton>
+          <MobileMenu className={isOpen ? 'open' : ''}>
+            <a href="#Home" onClick={() => setIsOpen(false)}>Home</a>
+            <a href="#About" onClick={() => setIsOpen(false)}>Sobre Nós</a>
+            <a href="#Feiras" onClick={() => setIsOpen(false)}>Atendimento</a>
+            <a href="#Contato" onClick={() => setIsOpen(false)}>Contato</a>
+          </MobileMenu>
+        </HamburgerWrapper>
 
       </Conteiner >
     </>

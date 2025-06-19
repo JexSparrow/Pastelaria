@@ -125,7 +125,8 @@ border-radius: 25px;
     }
 
      @media  (max-width:550px) {
-    justify-content: space-evenly;
+
+      display: none;
     
   }
   }
@@ -170,6 +171,14 @@ export const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   z-index: 1; 
+
+   @media  (max-width:550px) {
+    
+    height: 90%;
+    justify-content: space-between;
+    
+    
+  }
 `;
 
 export const Title = styled.h1`
@@ -198,6 +207,7 @@ export const Title = styled.h1`
 
   @media  (max-width:550px) {
     font-size: 3em;
+    width: 70%;
     
   }
 `;
@@ -219,5 +229,89 @@ export const Paragrafo = styled.p`
      @media  (max-width:1035px) {
     font-size: 2em;
     
+  }
+`;
+
+export const HamburgerWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: none;
+
+  @media (max-width: 550px) {
+    display: block;
+  }
+`;
+
+export const MenuButton = styled.button`
+  background: rgba(143, 14, 14, 0.6);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  
+  z-index: 11;
+  transition: 300ms all ease-in-out;
+
+  &:hover {
+    scale: 0.9;
+  }
+
+  &:active {
+    scale: 1.1;
+  }
+
+  span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: ${({ theme }) => theme.colors.amarelo};
+    margin: 4px 0;
+    transition: 0.4s all ease-in-out;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: rgba(143, 14, 14, 0.81);
+  box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
+  border-radius: 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+
+  &.open {
+    padding: 10px;
+    gap: 10px;
+    width: 150px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.amarelo};
+    font-family: 'Lobster';
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+
+    &:hover {
+      color: white;
+      scale: 1.05;
+    }
   }
 `;
