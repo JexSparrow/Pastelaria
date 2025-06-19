@@ -13,6 +13,12 @@ export const CustomSwiperContainer = styled.div`
     padding: 0 5%;
     position: relative; /* Essencial para posicionar os pseudo-elementos */
 
+    @media (max-width: 550px){
+    width: 260px;
+    height: 400px;
+
+  }
+
     /* Efeito de Fade na Borda Superior */
     &::before {
         content: '';
@@ -86,6 +92,12 @@ export const CustomSwiperContainer = styled.div`
 
   }
 
+  @media (max-width: 550px){
+    width: 120px; /* Tamanho da imagem no slide */
+        height: 120px;
+
+  }
+
     }
 
     .swiper-slide h4 {
@@ -103,6 +115,12 @@ export const CustomSwiperContainer = styled.div`
 
   @media (max-width: 700px){
     font-size: 1.75em;
+
+  }
+
+    @media (max-width: 550px){
+    font-size: 1.5em;
+    padding: 0 2%;
 
   }
         
@@ -130,6 +148,11 @@ export const CustomSwiperContainer = styled.div`
    @media (max-width: 700px){
     font-size: 1em;
     padding: 0 2%;
+
+  }
+
+  @media (max-width: 550px){
+    font-size: 0.8em;
 
   }
         

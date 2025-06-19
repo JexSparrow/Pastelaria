@@ -34,7 +34,7 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 550px){
-    font-size: 5em;
+    font-size: 5.5em;
 
   }
 
@@ -85,7 +85,7 @@ export const SubTitle = styled.h3`
   }
 
     @media (max-width: 550px){
-    font-size: 6em;
+    font-size: 4.5em;
 
   }
 `;

@@ -278,14 +278,12 @@ export const MobileMenu = styled.div`
   background: rgba(143, 14, 14, 0.81);
   box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
   border-radius: 12px;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
   overflow: hidden;
   width: 0;
   height: 0;
-  transition: all 0.4s ease-in-out;
+  transition: 400ms all ease-in-out;
   opacity: 0;
   visibility: hidden;
   transform: scaleY(0);
