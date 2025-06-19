@@ -33,7 +33,7 @@ text-shadow: 1px 1px 4px black;
   }
 
   @media (max-width: 400px){
-    font-size: 2.5em;
+    font-size: 2.75em;
     
 
   }
