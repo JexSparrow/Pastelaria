@@ -42,7 +42,7 @@ export const fairDays = [
         title: 'Sexta-feira',
         address: 'Rua Brasílio Itiberê esq. Rua Cel. Dulcídio - Água Verde',
         openingHours: 'Das 7:00 às 11:30',
-        description: 'Feira Orgânica e Convencional localizada próxima a Ligga Arena',
+        description: `Feira Orgânica e Convencional localizada próxima a Ligga Arena.\n\n * Nessa feira revezamos o ponto *\n\n Caso tenha dúvida, entre em contato pelo whatsapp ou instagram!`,
         mapLink: 'https://maps.app.goo.gl/vDzjjv6ePfyx48f79',
         images: getImagesArray(sextaImages),
         layout: 'reverse'

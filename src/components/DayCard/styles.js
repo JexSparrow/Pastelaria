@@ -143,6 +143,7 @@ export const Descricao = styled.p`
   font-size: 1.8em;
   font-family: Lobster;
   color: #fff;
+  white-space: pre-line;
 
     @media (max-width: 1250px){
     font-size: 1.5em;
