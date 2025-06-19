@@ -72,6 +72,11 @@ export const Conteiner = styled.div`
 
   }
 
+  @media (max-width: 550px){
+    height: 40vh;
+
+  }
+
 `;
 
 export const Logo = styled.img`
