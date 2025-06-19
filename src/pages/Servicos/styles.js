@@ -34,7 +34,13 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 550px){
-    font-size: 5.5em;
+    font-size: 5em;
+
+  }
+
+  @media (max-width: 400px){
+    font-size: 4em;
+    
 
   }
 

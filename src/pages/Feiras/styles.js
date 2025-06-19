@@ -21,8 +21,14 @@ text-shadow: 1px 1px 4px black;
   }
 
   @media (max-width: 550px){
-    font-size: 3.5em;
+    font-size: 4em;
     padding: 5% 0;
+
+  }
+
+  @media (max-width: 400px){
+    font-size: 3.2em;
+    
 
   }
 
