@@ -29,17 +29,17 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 700px){
-    font-size: 6.5em;
-
-  }
-
-  @media (max-width: 550px){
     font-size: 5em;
 
   }
 
+  @media (max-width: 550px){
+    font-size: 4.5em;
+
+  }
+
   @media (max-width: 400px){
-    font-size: 4em;
+    font-size: 3.8em;
     
 
   }
