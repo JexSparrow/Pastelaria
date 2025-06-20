@@ -89,26 +89,25 @@ export const BoxTexto = styled.div`
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  
+  align-items: center;        /* <-- Adicionado */
+  justify-content: center;    /* Opcional, depende do layout */
+  text-align: center;
+  gap: 10px;
 
-    @media (max-width: 1250px){
+  @media (max-width: 1250px) {
     width: 57%;
   }
 
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     width: 60%;
-    
-
   }
 
-   @media (max-width: 550px){
+  @media (max-width: 550px) {
     width: 100%;
     padding: 5%;
-    gap: 10px;
-
   }
 `;
+
 
 export const Endereco = styled.h3`
   font-size: 3em;
@@ -165,22 +164,21 @@ export const Horario = styled.p`
   font-family: Lobster;
   color: rgb(203, 29, 13);
   margin: 0 auto;
+  text-align: center; /* opcional, reforça alinhamento */
 
-    @media (max-width: 1250px){
+  @media (max-width: 1250px){
     font-size: 2em;
-
   }
 
   @media (max-width: 900px){
     font-size: 1.5em;
-
   }
 
-   @media (max-width: 550px){
+  @media (max-width: 550px){
     font-size: 1.25em;
-
   }
 `;
+
 
 export const Link = styled.a`
   font-size: 2em;
@@ -188,20 +186,19 @@ export const Link = styled.a`
   color: ${({ theme }) => theme.colors.amarelo};
   text-decoration: none;
   transition: 300ms all ease-in-out;
-  margin: 0 auto;
-  text-align: left;
+  text-align: center;     /* Corrigido de left -> center */
+  display: inline-block;  /* Garante que text-align funcione */
+  margin-top: 1rem;
 
   &:hover {
     scale: 1.1;
-   
   }
 
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     font-size: 1.5em;
-
   }
-
 `;
+
 
 export const SwiperCustomStyles = styled.div`
   .swiper-slide {

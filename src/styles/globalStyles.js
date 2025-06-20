@@ -9,6 +9,10 @@ box-sizing: border-box;
 outline: none;
 font-family: 'Poppins', sans-serif;
 
+  outline: 1px solid red;
+
+
+
 }
 
 button , a {
@@ -16,8 +20,20 @@ button , a {
 }
 
 html, body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  background-color: black;
   
 }
 
