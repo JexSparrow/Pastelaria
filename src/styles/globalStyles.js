@@ -24,6 +24,7 @@ html, body {
   position: relative;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 *, *::before, *::after {
   box-sizing: inherit;
