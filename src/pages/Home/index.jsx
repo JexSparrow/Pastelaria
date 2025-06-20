@@ -25,9 +25,21 @@ function Home() {
     <>
       <Conteiner>
         <BackgroundOverlay $showFirstImage={showFirstImage} />
-        <Logo src={logo} />
+        <Logo
+          src={logo}
+          initial={{ opacity: 0, y: -50 }} // Animação inicial
+          whileInView={{ opacity: 1, y: 0 }}   // Animação para o estado final
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1 }} // Duração e tipo de transição
+        />
 
-        <Header>
+        <Header
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.99 }}
+        >
+
           <div>
             <Link id='Home'>Home</Link>
             <Link href='#About'>Sobre Nós</Link>
@@ -37,21 +49,34 @@ function Home() {
         </Header>
 
         <Wrapper>
-          <motion.div
+
+
+
+
+          <Title
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.99 }}
           >
-            <Title>Pastelaria Kulik</Title>
-          </motion.div>
+            Pastelaria Kulik
 
-          <motion.div
+          </Title>
+
+
+
+
+
+          <Paragrafo
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
+            viewport={{ once: true, amount: 0.99 }}
           >
-            <Paragrafo>Vem para a Feira!</Paragrafo>
-          </motion.div>
+            Vem para a Feira!
+
+          </Paragrafo>
+
         </Wrapper>
 
         <HamburgerWrapper>
@@ -80,7 +105,7 @@ function Home() {
             )}
           </AnimatePresence>
         </HamburgerWrapper>
-      </Conteiner>
+      </Conteiner >
 
     </>
   );

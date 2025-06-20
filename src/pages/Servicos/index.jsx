@@ -7,8 +7,26 @@ function Services() {
         <>
             <Conteiner>
                 <Wrapper>
-                    <Title>~ Cardápio ~</Title>
-                    <Paragrafo>Deguste inúmeras opções em nosso cardápio! Aproveite e Confira!</Paragrafo>
+                    <Title
+                        initial={{ opacity: 0, scale: 0, y: 20 }} // Começa invisível, sem escala e um pouco abaixo
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }} // Anima para visível, escala original e posição original
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // Duração e suavização
+                        viewport={{ once: true, amount: 0.99 }}
+                    >
+                        ~ Cardápio ~
+                    </Title>
+
+                    <Paragrafo
+
+                        initial={{ opacity: 0, scale: 2, y: 0 }}
+
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        Deguste inúmeras opções em nosso cardápio! Aproveite e Confira!
+                    </Paragrafo>
                 </Wrapper>
 
                 <Conteiner2>

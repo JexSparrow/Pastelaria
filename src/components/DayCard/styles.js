@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion"; // Importe motion aqui para transformar componentes
 
 export const Conteiner = styled.div`
   background-color: black;
@@ -14,38 +15,30 @@ export const Wrapper = styled.div`
   padding: 0 5%;
   background-color: black;
   height: 100%;
-  gap: 10px;
+  align-items: center; // Adicionado para centralizar verticalmente em layout de linha
+  
 
   ${({ layoutDirection }) =>
     layoutDirection === "reverse" &&
     `
-        flex-direction: row-reverse; 
-    `}
-  ${({ layoutDirection }) =>
-    layoutDirection === "column" &&
-    `
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row-reverse;
     `}
 
-      @media (max-width: 1250px){
-   padding: 0 2%;
+  @media (max-width: 1250px){
+    padding: 0 2%;
+  }
 
-    @media (max-width: 900px){
+  @media (max-width: 900px){
     gap: 2%;
-    
-
   }
 
-   @media (max-width: 550px) {
+  @media (max-width: 550px) {
     flex-direction: column;
-    align-items: center;
-  }
-
+    align-items: center; /* Garante que os itens (BoxTexto e SwiperWrapper) sejam centralizados horizontalmente quando em coluna */
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)` // Transformado em motion component
   font-size: 5em;
   font-family: Lobster;
   letter-spacing: 1px;
@@ -54,166 +47,133 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.amarelo};
   text-shadow: 2px 2px 2px red;
 
-  ${({ layoutDirection }) =>
-    layoutDirection === "left" &&
-    `
-        text-align: left;
-        padding-left: 2%;
-    `}
-  ${({ layoutDirection }) =>
-    layoutDirection === "right" &&
-    `
-        text-align: right;
-        padding-right: 2%;
-    `}
-
-      @media (max-width: 1250px){
+  @media (max-width: 1250px){
     font-size: 4.5em;
-
   }
 
   @media (max-width: 900px){
     font-size: 4em;
-
   }
 
-   @media (max-width: 550px){
+  @media (max-width: 550px){
     font-size: 3em;
     padding: 5% 0;
-
   }
 `;
 
 export const BoxTexto = styled.div`
   background-color: black;
-  width: 55%;
+  width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;        /* <-- Adicionado */
-  justify-content: center;    /* Opcional, depende do layout */
+  align-items: center;
+  justify-content: space-evenly;
   text-align: center;
-  gap: 10px;
+  margin: 0 auto;
+  gap: 12px;
 
-  @media (max-width: 1250px) {
-    width: 57%;
-  }
-
-  @media (max-width: 900px) {
-    width: 60%;
+    @media (max-width: 800px) {
+    padding: 5%;
+    width: 100%;
   }
 
   @media (max-width: 550px) {
-    width: 100%;
     padding: 5%;
+    width: 90%;
   }
 `;
 
-
-export const Endereco = styled.h3`
+export const Endereco = styled(motion.h3)` // Adicionado (motion.h3)
   font-size: 3em;
   font-family: Lobster;
   letter-spacing: 3px;
   color: #fff;
   text-align: center;
+  
 
-   @media (max-width: 1250px){
+  @media (max-width: 1250px){
     font-size: 2.5em;
-
   }
-
   @media (max-width: 900px){
     font-size: 2em;
-
   }
-
-   @media (max-width: 700px){
+  @media (max-width: 700px){
     font-size: 1.5em;
-
   }
-
   @media (max-width: 550px){
     font-size: 1.75em;
     text-shadow: 1px 1px 1px ${({ theme }) => theme.colors.red};
-
   }
 `;
 
-export const Descricao = styled.p`
+export const Descricao = styled(motion.p)` // Adicionado (motion.p)
   font-size: 1.8em;
   font-family: Lobster;
   color: #fff;
   white-space: pre-line;
   text-align: center;
-  
+  /* Remova margens que possam atrapalhar o gap aqui, se houver */
 
-    @media (max-width: 1250px){
+  @media (max-width: 1250px){
     font-size: 1.5em;
-    
-
   }
-
   @media (max-width: 700px){
     font-size: 1.25em;
-
   }
-
 `;
 
-export const Horario = styled.p`
+export const Horario = styled(motion.p)` // Adicionado (motion.p)
   font-size: 2.5em;
   font-family: Lobster;
   color: rgb(203, 29, 13);
-  margin: 0 auto;
-  text-align: center; /* opcional, reforça alinhamento */
+  margin: 0 auto; /* Mantém este margin se for para centralizar o próprio elemento */
+  text-align: center;
+  
 
   @media (max-width: 1250px){
     font-size: 2em;
   }
-
   @media (max-width: 900px){
     font-size: 1.5em;
   }
-
   @media (max-width: 550px){
     font-size: 1.25em;
   }
 `;
 
-
-export const Link = styled.a`
+export const Link = styled(motion.a)` // Adicionado (motion.a)
   font-size: 2em;
   font-family: Lobster;
   color: ${({ theme }) => theme.colors.amarelo};
   text-decoration: none;
   transition: 300ms all ease-in-out;
-  text-align: center;     /* Corrigido de left -> center */
-  display: inline-block;  /* Garante que text-align funcione */
-  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+  
 
   &:hover {
     scale: 1.1;
   }
-
   @media (max-width: 900px) {
     font-size: 1.5em;
   }
 `;
-
 
 export const SwiperCustomStyles = styled.div`
   .swiper-slide {
     height: 100% !important; //proporção das imagens 4:3
   }
 
-   .swiper-button-prev,
+  .swiper-button-prev,
   .swiper-button-next {
     color: ${({ theme }) => theme.colors.amarelo};
-    font-size: 2.8em; /* Aumenta o tamanho */
-    font-weight: 900; /* Deixa a seta mais grossa */
-    text-shadow: 1px 1px 2px black; /* Ajuda a destacar no fundo */
+    font-size: 2.8em;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
     transition: color 0.3s ease;
 
-      &:hover {
+    &:hover {
       color: ${({ theme }) => theme.colors.red};
     }
   }
@@ -223,7 +183,6 @@ export const SwiperCustomStyles = styled.div`
     opacity: 0.8;
     height: 15px;
     width: 15px;
-    
   }
 
   .swiper-pagination-bullet-active {
@@ -234,17 +193,12 @@ export const SwiperCustomStyles = styled.div`
   .swiper-pagination-bullets {
     bottom: 10px;
   }
-
-
 `;
 
 export const SwiperWrapper = styled.div`
   width: 100%;
   max-width: 600px;
-  
-  
-  
-  margin: auto;
+  margin: auto; /* Isso já centraliza o SwiperWrapper horizontalmente dentro do seu pai */
   border-radius: 8px;
   overflow: hidden;
   background-color: black;
@@ -252,25 +206,19 @@ export const SwiperWrapper = styled.div`
   @media (max-width: 1250px){
     max-width: 450px;
     margin: auto;
-
   }
 
-   @media (max-width: 900px){
+  @media (max-width: 900px){
     max-width: 360px;
     margin: auto;
-
   }
 
   @media (max-width: 700px){
     max-width: 280px;
-
   }
 
   @media (max-width: 550px){
     max-width: 320px;
     padding: 0 3%;
-
-
   }
-
 `;

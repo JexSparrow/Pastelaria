@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import background from "../../assets/others/background.png";
 import background2 from "../../assets/others/background2.jpg";
 
@@ -79,7 +80,7 @@ export const Conteiner = styled.div`
 
 `;
 
-export const Logo = styled.img`
+export const Logo = styled(motion.img)`
   position: absolute;
   top: -60px;
   height: 220px;
@@ -97,7 +98,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const Header = styled.header`
+export const Header = styled(motion.div)`
  position: absolute;
 
 
@@ -186,7 +187,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-family: Norican;
  
   color: ${({ theme }) => theme.colors.amarelo};
@@ -212,12 +213,13 @@ export const Title = styled.h1`
 
   @media  (max-width:550px) {
     font-size: 3em;
-    width: 70%;
+    width: 65%;
+    margin: 0 auto;
     
   }
 `;
 
-export const Paragrafo = styled.p`
+export const Paragrafo = styled(motion.p)`
   
   font-family: Cookie;  
   
@@ -286,22 +288,14 @@ export const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 0;
-  height: 0;
-  transition: 400ms all ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  transform: scaleY(0);
-  transform-origin: top;
+  
+  
 
   &.open {
     padding: 10px;
     gap: 10px;
     width: 150px;
-    height: auto;
-    opacity: 1;
-    visibility: visible;
-    transform: scaleY(1);
+    
   }
 
   a {

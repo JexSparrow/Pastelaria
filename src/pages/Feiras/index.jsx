@@ -8,7 +8,12 @@ function Feiras() {
 
         <div>
             <Wrapper>
-                <Title id='Feiras'> ~ Feiras da Semana ~</Title>
+                <Title id='Feiras'
+                    initial={{ opacity: 0, scale: 0, y: 20 }} // Começa invisível, sem escala e um pouco abaixo
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }} // Anima para visível, escala original e posição original
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // Duração e suavização
+                    viewport={{ once: true, amount: 0.99 }}
+                > ~ Feiras da Semana ~</Title>
 
             </Wrapper>
 

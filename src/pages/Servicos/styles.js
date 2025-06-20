@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Conteiner = styled.div`
     background-color: black;
@@ -17,7 +18,7 @@ export const Wrapper = styled.div`
     border-bottom: 6px solid ${({ theme }) => theme.colors.amarelo};
 `;
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
     font-size: 7em;
     font-family: Cookie;
     color: ${({ theme }) => theme.colors.amarelo};
@@ -46,7 +47,7 @@ export const Title = styled.h2`
 
 `;
 
-export const Paragrafo = styled.p`
+export const Paragrafo = styled(motion.p)`
     font-size: 2em; /* Considere usar rem/em para responsividade */
     font-family: Lobster;
     letter-spacing: 1px;

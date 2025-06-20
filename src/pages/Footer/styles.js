@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 
 export const Conteiner = styled.div`
@@ -21,48 +22,49 @@ background-color: ${({ theme }) => theme.colors.red};
 `;
 
 export const Wrapper1 = styled.div`
-background-color: ${({ theme }) => theme.colors.red};
-display: flex;
-padding-right: 5%;
-height: 100%;
-width: 100%;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border-right: 3px solid ${({ theme }) => theme.colors.amarelo};
+  background-color: ${({ theme }) => theme.colors.red};
+  display: flex;
+  /* Removi padding-right aqui para evitar deslocamento visual */
+  padding: 20px 0; /* Adicione um padding vertical se precisar */
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center; /* Centraliza a motion.div horizontalmente */
+  border-right: 3px solid ${({ theme }) => theme.colors.amarelo};
 
-
+  /* Estilo para a motion.div que é filha direta de Wrapper1 */
+  > div {
+    display: flex; /* Transforma a motion.div em um container flex */
+    flex-direction: column; /* Organiza logo e parágrafo em coluna */
+    align-items: center; /* Centraliza a Logo e o Paragrafo horizontalmente dentro desta motion.div */
+    justify-content: center; /* Centraliza verticalmente (se houver espaço) */
+    text-align: center; /* Garante que o texto seja centralizado */
+    width: 100%; /* Faz a motion.div ocupar toda a largura disponível do Wrapper1 */
+    max-width: 300px; /* Limite a largura para melhor legibilidade/design, se necessário */
+    padding-right: 5%; /* Se este padding era para o conteúdo interno, mova-o para cá */
+    padding-left: 5%; /* Adicione padding-left para centralizar o conteúdo dentro dos 300px*/
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+  }
 `;
 
 export const Logo = styled.img`
-width: 240px;
+  width: 220px;
+  height: auto;
 
-@media  (max-width:800px) {
-    width: 180px;
-    
-  }
-
-  @media  (max-width:550px) {
+  @media (max-width: 768px) {
     width: 120px;
-    
   }
-
 `;
 
 export const Paragrafo = styled.p`
-font-size: 1.5em;
-font-family: lobster;
-color: aliceblue;
-text-align: center;
+  font-size: 1.6em;
+  color: aliceblue; 
+  font-family: Lobster;
+  text-align: center;
+  margin-top: 10px;
 
-@media  (max-width:800px) {
-    font-size: 1.25em;
-    
-  }
-
-  @media  (max-width:550px) {
-    font-size: 0.85em;
-    
+  @media (max-width: 768px) {
+    font-size: 1em;
   }
 `;
 
@@ -75,10 +77,6 @@ flex-direction: column;
 justify-content: space-evenly;
 border-left: 3px solid ${({ theme }) => theme.colors.amarelo};
 
- @media  (max-width:550px) {
-    justify-content: space-between;
-    
-  }
 `;
 
 export const Img = styled.img`
@@ -87,7 +85,6 @@ export const Img = styled.img`
   width: 50px;
   cursor: pointer;
   transition: 300ms all ease;
-
 
 &:hover {
   scale: 1.1;

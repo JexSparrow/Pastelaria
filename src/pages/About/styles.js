@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Conteiner = styled.div`
 background: black;
@@ -46,7 +47,7 @@ align-items: center;
 
 `;
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
 
 font-size: 4.5em;
 color: #fff;
@@ -74,8 +75,8 @@ font-family: Norican;
 
 `;
 
-export const Logo = styled.img`
-width: 66%;
+export const Logo = styled(motion.img)`
+width: 50%;
 
 @media  (max-width:1035px) {
     width: 90%;
@@ -90,10 +91,8 @@ width: 66%;
 
 export const Box2 = styled.div`
 background-color: black;
-display: flex;
-flex-direction: column;
 padding: 0 5%;
-gap: 20px;
+
 
 @media  (max-width:550px) {
     width: 100%;
@@ -102,7 +101,7 @@ gap: 20px;
   }
 `;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled(motion.h3)`
 
 font-size: 4em;
 
@@ -140,7 +139,7 @@ letter-spacing: 2px;
 
 
 
-export const Paragrafo = styled.p`
+export const Paragrafo = styled(motion.p)`
 font-size: 1.5em;
 font-family: 'Chocolate Classical Sans';
 font-weight: 600;

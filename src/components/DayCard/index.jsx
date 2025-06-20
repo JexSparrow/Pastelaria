@@ -24,6 +24,13 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
+// Defina as variantes para os itens internos do BoxTexto
+const boxTextItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+
 function DayCard({
     title,
     address,
@@ -36,17 +43,17 @@ function DayCard({
     return (
         <Conteiner>
             <Dias>
-                <motion.div
+                <motion.div // Este motion.div é para o Title, não confunda com os internos do BoxTexto
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true, amount: 0.4 }}
                 >
-                    <Title layoutDirection={layoutDirection}>{title}</Title>
+                    <Title>{title}</Title>
                 </motion.div>
 
                 <Wrapper layoutDirection={layoutDirection}>
-                    <motion.div
+                    <motion.div // Este motion.div é para o SwiperWrapper
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.2, delay: 0.2 }}
@@ -93,64 +100,31 @@ function DayCard({
                         </SwiperWrapper>
                     </motion.div>
 
-                    <motion.div
+                    <motion.div // Este motion.div é o contêiner para o BoxTexto (para animar o BoxTexto como um bloco)
                         initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0, justifyContent: 'center' }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, delay: 0.3 }}
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        <BoxTexto>
-                            <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                transition={{ staggerChildren: 0.2 }}
-                                variants={{
-                                    hidden: {},
-                                    visible: {},
-                                }}
+                        <BoxTexto
+                            initial="hidden" // Define o estado inicial para os filhos
+                            whileInView="visible" // Define o estado visível para os filhos
+                            transition={{ staggerChildren: 0.2 }} // Aplica o stagger aos filhos diretos
+                            viewport={{ once: true, amount: 0.5 }} // Viewport para o BoxTexto animar seus filhos
+                        >
+                            {/* Agora Endereco, Horario, Descricao e Link são filhos diretos de BoxTexto */}
+                            {/* e receberão as variantes de animação e o gap */}
+                            <Endereco variants={boxTextItemVariants}>{address}</Endereco>
+                            <Horario variants={boxTextItemVariants}>{openingHours}</Horario>
+                            <Descricao variants={boxTextItemVariants}>{description}</Descricao>
+                            <Link
+                                variants={boxTextItemVariants}
+                                href={mapLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0, justifyContent: 'center' },
-                                    }}
-                                >
-                                    <Endereco>{address}</Endereco>
-                                </motion.div>
-
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0 },
-                                    }}
-                                >
-                                    <Horario>{openingHours}</Horario>
-                                </motion.div>
-
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0 },
-                                    }}
-                                >
-                                    <Descricao>{description}</Descricao>
-                                </motion.div>
-
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0 },
-                                    }}
-                                >
-                                    <Link
-                                        href={mapLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Ver no Mapa
-                                    </Link>
-                                </motion.div>
-                            </motion.div>
+                                Ver no Mapa
+                            </Link>
                         </BoxTexto>
                     </motion.div>
                 </Wrapper>
@@ -158,6 +132,5 @@ function DayCard({
         </Conteiner>
     );
 }
-
 
 export default DayCard;

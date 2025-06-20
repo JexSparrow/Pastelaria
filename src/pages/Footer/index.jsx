@@ -69,8 +69,6 @@ function Footer() {
                     </motion.div>
                 </Wrapper2>
 
-                {/* Anima botão voltar ao topo */}
-
                 <Arrow
                     href="#Home"
                     onClick={(e) => {

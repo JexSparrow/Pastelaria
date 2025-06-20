@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
 height: 100%;
@@ -8,7 +9,7 @@ border-top: 6px solid ${({ theme }) => theme.colors.amarelo};
 border-bottom: 6px solid ${({ theme }) => theme.colors.amarelo};
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
 text-align: center;
 font-size: 7.5em;
 font-family: Cookie;
