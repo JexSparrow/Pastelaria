@@ -9,8 +9,6 @@ box-sizing: border-box;
 outline: none;
 font-family: 'Poppins', sans-serif;
 
-  outline: 1px solid red;
-
 
 
 }
