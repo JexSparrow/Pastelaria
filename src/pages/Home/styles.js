@@ -99,9 +99,7 @@ export const Logo = styled(motion.img)`
 `;
 
 export const Header = styled(motion.div)`
- position: absolute;
-
-
+  position: absolute;
   top: 0px;
   height: auto;
   width: 100%;
@@ -110,14 +108,15 @@ export const Header = styled(motion.div)`
   justify-content: center; 
   z-index: 1; 
 
+  @media (max-width: 550px) {
+    display: none !important;
+  }
+
   div { 
-
-background: rgba(210, 22, 22, 0.25);
-
-box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
-backdrop-filter: blur( 3px );
-
-border-radius: 25px;
+    background: rgba(210, 22, 22, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
+    backdrop-filter: blur( 3px );
+    border-radius: 25px;
     display: flex;
     gap: 35px;
     height: auto;
@@ -125,18 +124,11 @@ border-radius: 25px;
     transition: 300ms all ease-in-out;
 
     &:hover {
-
       box-shadow: 2px 2px 20px 0 rgba(255, 255, 255, 0.45);
-
     }
-
-     @media  (max-width:550px) {
-
-      display: none;
-    
-  }
   }
 `;
+
 
 export const Link = styled.a`
   /* Mantenha seus estilos do Link */
@@ -243,7 +235,7 @@ export const HamburgerWrapper = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  z-index: 10000; /* aumento para garantir visibilidade */
   display: none;
 
   @media (max-width: 550px) {
@@ -280,31 +272,24 @@ export const MenuButton = styled.button`
 
 export const MobileMenu = styled.div`
   position: absolute;
-  top: 50px;
-  right: 0;
-  background: rgba(143, 14, 14, 0.81);
+  top: 60px;
+  right: 10px;
+  background: rgba(143, 14, 14, 0.95);
   box-shadow: 0 8px 32px 0 rgba(255, 176, 4, 0.45);
   border-radius: 12px;
-  display: flex;
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
-  overflow: hidden;
-  
-  
-
-  &.open {
-    padding: 10px;
-    gap: 10px;
-    width: 150px;
-    
-  }
+  padding: 10px;
+  gap: 10px;
+  z-index: 10000;
 
   a {
     color: ${({ theme }) => theme.colors.amarelo};
     font-family: 'Lobster';
     font-size: 1.5em;
     text-decoration: none;
-    transition: 0.3s ease-in-out;
     text-align: center;
+    transition: 0.3s ease-in-out;
 
     &:hover {
       color: white;

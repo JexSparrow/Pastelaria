@@ -86,24 +86,12 @@ function Home() {
             <span />
           </MenuButton>
 
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                key="mobile-menu"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <MobileMenu className="open">
-                  <a href="#Home" onClick={() => setIsOpen(false)}>Home</a>
-                  <a href="#About" onClick={() => setIsOpen(false)}>Sobre Nós</a>
-                  <a href="#Feiras" onClick={() => setIsOpen(false)}>Atendimento</a>
-                  <a href="#Contato" onClick={() => setIsOpen(false)}>Contato</a>
-                </MobileMenu>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <MobileMenu $isOpen={isOpen}>
+            <Link href="#About" onClick={() => setIsOpen(false)}>Sobre Nós</Link>
+            <Link href="#Feiras" onClick={() => setIsOpen(false)}>Atendimento</Link>
+            <Link href="#Contato" onClick={() => setIsOpen(false)}>Contato</Link>
+          </MobileMenu>
+
         </HamburgerWrapper>
       </Conteiner >
 
