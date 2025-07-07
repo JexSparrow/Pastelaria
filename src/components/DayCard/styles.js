@@ -47,8 +47,27 @@ export const Title = styled(motion.h2)` // Transformado em motion component
   color: ${({ theme }) => theme.colors.amarelo};
   text-shadow: 2px 2px 2px red;
 
+  display: flex; /* Transforma o título em um container flex */
+  align-items: center; /* Centraliza verticalmente o texto e os traços */
+  justify-content: center; /* Centraliza o grupo (traço-texto-traço) */
+  gap: 3%; /* Espaço entre o traço e o texto */
+  white-space: nowrap; /* Garante que o texto do título não quebre se os traços estiverem presentes */
+  padding: 1% 10% 2%; /* Adicione um padding lateral para que os traços não grudem na borda da tela */
+
+
+  &::before,
+  &::after {
+    content: ''; 
+    flex: 1; // ocupar todo espaço
+    height: 5px;
+    background-color: ${({ theme }) => theme.colors.amarelo}; 
+    border-bottom: 1px solid red;
+    
+  }
+
   @media (max-width: 1250px){
     font-size: 4.5em;
+    
   }
 
   @media (max-width: 900px){
@@ -57,7 +76,8 @@ export const Title = styled(motion.h2)` // Transformado em motion component
 
   @media (max-width: 550px){
     font-size: 3em;
-    padding: 5% 0;
+    padding: 5%;
+    gap: 6%;
   }
 `;
 

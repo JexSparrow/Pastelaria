@@ -16,6 +16,7 @@ font-family: Cookie;
 color: ${({ theme }) => theme.colors.amarelo};
 text-shadow: 1px 1px 4px black;
 
+
 @media (max-width: 900px){
     font-size: 6em;
 
