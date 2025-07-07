@@ -116,7 +116,7 @@ export const Arrow = styled.a`
 position: absolute;
 width: 50px;
 left: 1%;
-top: -12%;
+top: -9%;
 
 transition: 300ms all ease-in-out;
 
@@ -131,8 +131,9 @@ transition: 300ms all ease-in-out;
   }
 
    @media  (max-width:550px) {
-    top: -18%;
+    top: -12%;
     z-index: 999;
+    
     
   }
 `;

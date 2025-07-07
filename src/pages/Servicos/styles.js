@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Conteiner = styled.div`
-    background-color: black;
+    background-color: #121212;
     padding: 3% 0;
     
 `;
@@ -100,7 +100,7 @@ export const SubTitle = styled.h3`
 
 
 export const Conteiner2 = styled.div`
-    background-color: black; /* Cor de debug, considere mudar */
+    background-color: #121212; /* Cor de debug, considere mudar */
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -143,7 +143,7 @@ export const Conteiner2 = styled.div`
 
 
 export const Wrapper2 = styled.div`
-    background-color: black; /* Cor de debug, considere mudar */
+    background-color: #121212; /* Cor de debug, considere mudar */
     padding: 16px; /* Padding interno para o conteúdo de cada item */
    
     display: flex;

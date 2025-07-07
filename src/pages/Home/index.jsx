@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Conteiner, BackgroundOverlay, Header, Link, Logo, Paragrafo, Title, Wrapper, HamburgerWrapper, MenuButton, MobileMenu } from "./styles";
 import logo from "../../assets/others/logo.png";
-import { motion, AnimatePresence } from 'framer-motion';
 
 
 function Home() {
@@ -9,14 +8,14 @@ function Home() {
   const [showFirstImage, setShowFirstImage] = useState(true);
 
   useEffect(() => {
-    // Configura um intervalo para alternar a imagem a cada 5 segundos (5000ms)
+    // Configura um intervalo para alternar a imagem a cada 3seg
     const interval = setInterval(() => {
       setShowFirstImage(prev => !prev); // Alterna o valor de true para false e vice-versa
-    }, 3000); // 3 segundos
+    }, 3000);
 
     // Limpa o intervalo quando o componente é desmontado para evitar vazamentos de memória
     return () => clearInterval(interval);
-  }, []); // O array vazio garante que o useEffect rode apenas uma vez (no montagem do componente)
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,9 +27,9 @@ function Home() {
         <Logo
           src={logo}
           initial={{ opacity: 0, y: -50 }} // Animação inicial
-          whileInView={{ opacity: 1, y: 0 }}   // Animação para o estado final
+          whileInView={{ opacity: 1, y: 0 }}   // Animação final
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.1 }} // Duração e tipo de transição
+          viewport={{ once: true, amount: 0.1 }} // Duração e transição
         />
 
         <Header

@@ -88,8 +88,8 @@ function DayCard({
                                                         objectFit: "cover",
                                                         objectPosition: "center",
                                                         display: "block",
-                                                        border: "4px solid #CB1D0D",
-                                                        borderRadius: "5px",
+
+
                                                     }}
                                                 />
                                             </div>

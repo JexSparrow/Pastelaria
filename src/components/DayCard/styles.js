@@ -2,18 +2,18 @@ import styled from "styled-components";
 import { motion } from "framer-motion"; // Importe motion aqui para transformar componentes
 
 export const Conteiner = styled.div`
-  background-color: black;
+  background-color: #121212;
   padding: 1% 0 2%;
 `;
 
 export const Dias = styled.div`
-  background-color: black;
+  background-color: #121212;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   padding: 0 5%;
-  background-color: black;
+  background-color: #121212;
   height: 100%;
   align-items: center; // Adicionado para centralizar verticalmente em layout de linha
   
@@ -62,7 +62,7 @@ export const Title = styled(motion.h2)` // Transformado em motion component
 `;
 
 export const BoxTexto = styled.div`
-  background-color: black;
+  background-color: #121212;
   width: 80%;
   height: 100%;
   display: flex;
@@ -199,9 +199,9 @@ export const SwiperWrapper = styled.div`
   width: 100%;
   max-width: 600px;
   margin: auto; /* Isso já centraliza o SwiperWrapper horizontalmente dentro do seu pai */
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
-  background-color: black;
+  background-color: #121212;
 
   @media (max-width: 1250px){
     max-width: 450px;

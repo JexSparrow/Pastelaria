@@ -12,9 +12,9 @@ export const BackgroundOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Garante que as imagens não "vazem" se forem maiores */
+  overflow: hidden; // Garante que as imagens não vazem se forem maiores
 
-  /* Camada da primeira imagem */
+  // Camada da primeira imagem
   &::before {
     content: '';
     position: absolute;
@@ -26,12 +26,12 @@ export const BackgroundOverlay = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.3); /* Mantenha o filtro de brilho na imagem base */
-    transition: opacity 1s ease-in-out; /* Transição suave para a opacidade */
-    opacity: ${({ $showFirstImage }) => ($showFirstImage ? 1 : 0)}; /* Opacidade controlada por prop */
+    filter: brightness(0.3); // filtro de brilho na imagem base
+    transition: opacity 1s ease-in-out;
+    opacity: ${({ $showFirstImage }) => ($showFirstImage ? 1 : 0)};
   }
 
-  /* Camada da segunda imagem */
+  // Camada da segunda imagem
   &::after {
     content: '';
     position: absolute;
@@ -45,9 +45,9 @@ export const BackgroundOverlay = styled.div`
     
     
     background-repeat: no-repeat;
-    filter: brightness(0.4); /* Mantenha o filtro de brilho na segunda imagem também */
-    transition: opacity 1s ease-in-out; /* Transição suave para a opacidade */
-    opacity: ${({ $showFirstImage }) => ($showFirstImage ? 0 : 1)}; /* Opacidade inversa da primeira */
+    filter: brightness(0.4); // filtro de brilho na segunda imagem
+    transition: opacity 1s ease-in-out; 
+    opacity: ${({ $showFirstImage }) => ($showFirstImage ? 0 : 1)};
   }
 
   z-index: -1;
@@ -60,7 +60,7 @@ export const Conteiner = styled.div`
   
  
   background-color: transparent;
-  box-shadow: 1px -10px 10px 5px rgb(0, 0, 0) inset;
+  box-shadow: 1px -10px 10px 5px rgba(18, 18, 18, 0.99) inset;
 
 
  @media (max-width: 900px){
@@ -215,10 +215,10 @@ export const Paragrafo = styled(motion.p)`
   
   font-family: Cookie;  
   
-  color: #fff; /* Certifique-se de que a cor do texto seja visível */
+  color: #fff;
   font-size: 4em;
-  text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7); /* Adiciona sombra para melhor legibilidade */
-  z-index: 1; /* Garante que o parágrafo fique acima do overlay */
+  text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.7);
+  z-index: 1;
 
    @media  (max-width:1035px) {
     font-size: 3em;
@@ -235,7 +235,7 @@ export const HamburgerWrapper = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10000; /* aumento para garantir visibilidade */
+  z-index: 10000;
   display: none;
 
   @media (max-width: 550px) {
@@ -282,6 +282,13 @@ export const MobileMenu = styled.div`
   padding: 10px;
   gap: 10px;
   z-index: 10000;
+
+  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
+  transform: ${({ $isOpen }) => ($isOpen ? 'scale(1)' : 'scale(0.95)')};
+  pointer-events: ${({ $isOpen }) => ($isOpen ? 'auto' : 'none')};
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out; 
+  display: flex; //display flex para funcionar
+  
 
   a {
     color: ${({ theme }) => theme.colors.amarelo};

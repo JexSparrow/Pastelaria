@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+
+// #121212
+// #1A1A1A
+// #212121
+
+//#1C1C1E
+// #28282B
+// #0A0A0A
+
+
 export const Conteiner = styled.div`
-background: black;
+background: #121212;
 width: 100vw;
 display: flex;
 justify-content: center;
@@ -90,7 +100,7 @@ width: 50%;
 `;
 
 export const Box2 = styled.div`
-background-color: black;
+background-color: #121212;
 padding: 0 5%;
 
 
