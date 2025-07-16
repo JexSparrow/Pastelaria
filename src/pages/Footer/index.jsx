@@ -37,8 +37,8 @@ function Footer() {
                         transition={{ duration: 1, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <Paragrafo>Telefone: (41) 99579-1310</Paragrafo>
-                        <Paragrafo>contato@pastelariakulik.br</Paragrafo>
+                        <Paragrafo>Telefone: (41) 9642-8823</Paragrafo>
+                        <Paragrafo>contato@pastelariakulik.com.br</Paragrafo>
                     </motion.div>
 
                     <motion.div
@@ -49,7 +49,7 @@ function Footer() {
                         style={{ display: "flex", justifyContent: "space-evenly" }}
                     >
                         <motion.a
-                            href="https://wa.me/41995791310"
+                            href="https://wa.me/4196428823"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.2 }}
