@@ -48,12 +48,12 @@ function About() {
                         viewport={{ once: true, amount: 0.5 }}
                         variants={containerVariants} // O pai gerencia o stagger dos filhos
                     >
-                        {/* SubTitle agora é um motion.h2 e recebe as variantes diretamente */}
+                        {/* SubTitle é um motion.h2 e recebe as variantes diretamente */}
                         <SubTitle variants={itemVariants}>
                             Mais de 37 Anos de Tradição e Sabor que Conecta!
                         </SubTitle>
 
-                        {/* Paragrafo agora é um motion.p e recebe as variantes diretamente */}
+                        {/* Paragrafo é um motion.p e recebe as variantes diretamente */}
                         <Paragrafo variants={itemVariants}>
                             Na Pastelaria Kulik, cada pastel é uma mordida na história. Há mais de três décadas nossa família cultiva o legado iniciado pelo meu pai, transformando ingredientes frescos e muito carinho em pastéis que encantam gerações.
                         </Paragrafo>

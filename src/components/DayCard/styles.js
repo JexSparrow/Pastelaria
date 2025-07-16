@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion"; // Importe motion aqui para transformar componentes
+import { motion } from "framer-motion";
 
 export const Conteiner = styled.div`
   background-color: #121212;
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   padding: 0 5%;
   background-color: #121212;
   height: 100%;
-  align-items: center; // Adicionado para centralizar verticalmente em layout de linha
+  align-items: center;
   
 
   ${({ layoutDirection }) =>
@@ -34,52 +34,59 @@ export const Wrapper = styled.div`
 
   @media (max-width: 550px) {
     flex-direction: column;
-    align-items: center; /* Garante que os itens (BoxTexto e SwiperWrapper) sejam centralizados horizontalmente quando em coluna */
+    align-items: center;
   }
 `;
 
-export const Title = styled(motion.h2)` // Transformado em motion component
+export const Title = styled(motion.h2)`
   font-size: 5em;
   font-family: Lobster;
   letter-spacing: 1px;
   text-align: center;
-  padding: 1% 0 2%;
   color: ${({ theme }) => theme.colors.amarelo};
   text-shadow: 2px 2px 2px red;
 
-  display: flex; /* Transforma o título em um container flex */
-  align-items: center; /* Centraliza verticalmente o texto e os traços */
-  justify-content: center; /* Centraliza o grupo (traço-texto-traço) */
-  gap: 3%; /* Espaço entre o traço e o texto */
-  white-space: nowrap; /* Garante que o texto do título não quebre se os traços estiverem presentes */
-  padding: 1% 10% 2%; /* Adicione um padding lateral para que os traços não grudem na borda da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  white-space: nowrap;
+  padding: 1% 10% 2%;
 
+   ${({ $isTuesday }) =>
+    $isTuesday &&
+    `
+      &::before,
+      &::after {
+        display: none !important;
+        content: none !important;
+      }
+  `}
 
   &::before,
   &::after {
-    content: ''; 
-    flex: 1; // ocupar todo espaço
+    content: '';
+    flex: 1;
     height: 5px;
-    background-color: ${({ theme }) => theme.colors.amarelo}; 
+    background-color: ${({ theme }) => theme.colors.amarelo};
     border-bottom: 1px solid red;
-    
   }
 
-  @media (max-width: 1250px){
+  @media (max-width: 1250px) {
     font-size: 4.5em;
-    
   }
 
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     font-size: 4em;
   }
 
-  @media (max-width: 550px){
+  @media (max-width: 550px) {
     font-size: 3em;
     padding: 5%;
     gap: 6%;
   }
 `;
+
 
 export const BoxTexto = styled.div`
   background-color: #121212;
@@ -104,7 +111,7 @@ export const BoxTexto = styled.div`
   }
 `;
 
-export const Endereco = styled(motion.h3)` // Adicionado (motion.h3)
+export const Endereco = styled(motion.h3)`
   font-size: 3em;
   font-family: Lobster;
   letter-spacing: 3px;
@@ -127,13 +134,12 @@ export const Endereco = styled(motion.h3)` // Adicionado (motion.h3)
   }
 `;
 
-export const Descricao = styled(motion.p)` // Adicionado (motion.p)
+export const Descricao = styled(motion.p)` 
   font-size: 1.8em;
   font-family: Lobster;
   color: #fff;
   white-space: pre-line;
   text-align: center;
-  /* Remova margens que possam atrapalhar o gap aqui, se houver */
 
   @media (max-width: 1250px){
     font-size: 1.5em;
@@ -143,11 +149,11 @@ export const Descricao = styled(motion.p)` // Adicionado (motion.p)
   }
 `;
 
-export const Horario = styled(motion.p)` // Adicionado (motion.p)
+export const Horario = styled(motion.p)` 
   font-size: 2.5em;
   font-family: Lobster;
   color: rgb(203, 29, 13);
-  margin: 0 auto; /* Mantém este margin se for para centralizar o próprio elemento */
+  margin: 0 auto; 
   text-align: center;
   
 
@@ -162,7 +168,7 @@ export const Horario = styled(motion.p)` // Adicionado (motion.p)
   }
 `;
 
-export const Link = styled(motion.a)` // Adicionado (motion.a)
+export const Link = styled(motion.a)`
   font-size: 2em;
   font-family: Lobster;
   color: ${({ theme }) => theme.colors.amarelo};
@@ -182,7 +188,7 @@ export const Link = styled(motion.a)` // Adicionado (motion.a)
 
 export const SwiperCustomStyles = styled.div`
   .swiper-slide {
-    height: 100% !important; //proporção das imagens 4:3
+    height: 100% !important; 
   }
 
   .swiper-button-prev,

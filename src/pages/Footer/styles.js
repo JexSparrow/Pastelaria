@@ -24,25 +24,24 @@ background-color: ${({ theme }) => theme.colors.red};
 export const Wrapper1 = styled.div`
   background-color: ${({ theme }) => theme.colors.red};
   display: flex;
-  /* Removi padding-right aqui para evitar deslocamento visual */
-  padding: 20px 0; /* Adicione um padding vertical se precisar */
+  padding: 20px 0; 
   height: 100%;
   width: 100%;
   flex-direction: column;
-  align-items: center; /* Centraliza a motion.div horizontalmente */
+  align-items: center; 
   border-right: 3px solid ${({ theme }) => theme.colors.amarelo};
 
   /* Estilo para a motion.div que é filha direta de Wrapper1 */
   > div {
-    display: flex; /* Transforma a motion.div em um container flex */
-    flex-direction: column; /* Organiza logo e parágrafo em coluna */
-    align-items: center; /* Centraliza a Logo e o Paragrafo horizontalmente dentro desta motion.div */
-    justify-content: center; /* Centraliza verticalmente (se houver espaço) */
-    text-align: center; /* Garante que o texto seja centralizado */
-    width: 100%; /* Faz a motion.div ocupar toda a largura disponível do Wrapper1 */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    width: 100%; 
     max-width: 300px; /* Limite a largura para melhor legibilidade/design, se necessário */
-    padding-right: 5%; /* Se este padding era para o conteúdo interno, mova-o para cá */
-    padding-left: 5%; /* Adicione padding-left para centralizar o conteúdo dentro dos 300px*/
+    padding-right: 5%; 
+    padding-left: 5%; 
     box-sizing: border-box; /* Garante que o padding não adicione largura extra */
   }
 `;

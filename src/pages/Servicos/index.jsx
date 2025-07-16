@@ -1,6 +1,6 @@
 import { Conteiner, Conteiner2, Paragrafo, SubTitle, Title, Wrapper, Wrapper2 } from "./styles";
-import MenuCarousel from "../../components/MenuCarrosel"; // Importe o novo componente de carrossel
-import { menuItems } from "../../data/menuItems.js"; // Importe os dados dos itens de menu
+import MenuCarousel from "../../components/MenuCarrosel";
+import { menuItems } from "../../data/menuItems.js";
 
 function Services() {
     return (
@@ -32,7 +32,7 @@ function Services() {
                 <Conteiner2>
                     <Wrapper2>
                         <SubTitle className="pasteis">Pastéis</SubTitle>
-                        {/* Carrossel de Pastéis (default: baixo para cima) */}
+
                         <MenuCarousel items={menuItems.pastels} />
                     </Wrapper2>
 
@@ -44,7 +44,7 @@ function Services() {
 
                     <Wrapper2 className="bebidas">
                         <SubTitle>Bebidas</SubTitle>
-                        {/* Carrossel de Bebidas (default: baixo para cima) */}
+
                         <MenuCarousel items={menuItems.drinks} />
                     </Wrapper2>
                 </Conteiner2>

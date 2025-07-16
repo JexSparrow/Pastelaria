@@ -48,7 +48,7 @@ export const Title = styled(motion.h2)`
 `;
 
 export const Paragrafo = styled(motion.p)`
-    font-size: 2em; /* Considere usar rem/em para responsividade */
+    font-size: 2em;
     font-family: Lobster;
     letter-spacing: 1px;
     padding-bottom: 1%;
@@ -100,12 +100,12 @@ export const SubTitle = styled.h3`
 
 
 export const Conteiner2 = styled.div`
-    background-color: #121212; /* Cor de debug, considere mudar */
+    background-color: #121212;
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
    
-    padding: 1%; /* Certifique-se de que box-sizing: border-box; esteja ativado globalmente */
+    padding: 1%; 
 
     align-items: start; /* Alinha os itens ao topo das células do grid */
     justify-content: center; /* Centraliza os itens horizontalmente se houver espaço */
@@ -143,8 +143,8 @@ export const Conteiner2 = styled.div`
 
 
 export const Wrapper2 = styled.div`
-    background-color: #121212; /* Cor de debug, considere mudar */
-    padding: 16px; /* Padding interno para o conteúdo de cada item */
+    background-color: #121212; 
+    padding: 16px;
    
     display: flex;
     flex-direction: column;

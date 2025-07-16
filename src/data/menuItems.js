@@ -64,7 +64,7 @@ export const menuItems = {
         { name: 'Chocolate', image: chocolate, description: 'Chocolate ao leite cremoso. Temos opção de adicionar Açúcar e Canela' },
         { name: 'Banana', image: banana, description: 'Banana caramelizada! Temos opção de adicionar Açúcar e Canela' },
     ],
-    // Adicione mais pasteis conforme necessário
+
 
     snacks: [
         { name: 'Pão com Bife', image: paobife, description: 'Bife com Queijo Derretido e suculento feito na chapa, uma delícia!' },
@@ -78,7 +78,7 @@ export const menuItems = {
         { name: 'Kibe', image: kibe, description: 'Delicioso kibe frito, temperado no ponto certo.' },
     ],
 
-    // Adicione mais lanches
+
 
     drinks: [
         { name: 'Coca Cola', image: coca, description: 'Refrigerante tradicional para acompanhar seu pastél!' },
@@ -96,6 +96,6 @@ export const menuItems = {
         { name: 'Pingado', image: cafeleite, description: 'Café com leite para começar bem o dia! Temos a opção Sem Açúcar' },
         { name: 'Chocolate Quente', image: nescau, description: 'Nescauzão quentinho pra adoçar sua vida!' },
         { name: 'Água Mineral', image: agua, description: 'Escolha entre Natural ou com Gás. Perfeita para hidratar!' },
-        // Adicione mais bebidas
+
     ]
 };

@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const CustomSwiperContainer = styled.div`
     height: 420px; /* Altura fixa para o carrossel vertical */
-    width: 300px; /* Largura fixa ou ajustável, dependendo do design */
+    width: 300px;
     margin: 0 auto;
     border-radius: 8px;
     overflow: hidden;
-    /* Remover borda e padding de debug ou ajustar conforme o tema */
+    
     
     // NOVO BOX-SHADOW APLICADO AQUI
     box-shadow: 
         inset -10px 0px 20px -10px rgba(255, 215, 0, 0.75), /* Sombra interna esquerda (amarelo) */
         inset 10px 0px 20px -10px rgba(255, 215, 0, 0.75),  /* Sombra interna direita (amarelo) */
-        0px 8px 16px rgba(18, 18, 18, 0.5); /* Sombra externa com #121212 e opacidade */
+        0px 8px 16px rgba(18, 18, 18, 0.5);
 
     background-color: #121212;
     padding: 0 5%;
@@ -31,7 +31,7 @@ export const CustomSwiperContainer = styled.div`
         left: 0;
         right: 0;
         height: 70px; /* Altura do efeito de fade */
-        background: linear-gradient(to bottom, #121212, rgba(18, 18, 18, 0)); /* Cor de fundo ajustada para #121212 */
+        background: linear-gradient(to bottom, #121212, rgba(18, 18, 18, 0));
         z-index: 10; /* Garante que o gradiente fique acima dos slides */
         pointer-events: none; /* Permite interagir com o Swiper por baixo do gradiente */
     }
@@ -44,7 +44,7 @@ export const CustomSwiperContainer = styled.div`
         left: 0;
         right: 0;
         height: 70px; /* Altura do efeito de fade */
-        background: linear-gradient(to top, #121212, rgba(18, 18, 18, 0)); /* Cor de fundo ajustada para #121212 */
+        background: linear-gradient(to top, #121212, rgba(18, 18, 18, 0));
         z-index: 10;
         pointer-events: none;
     }

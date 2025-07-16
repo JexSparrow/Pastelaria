@@ -131,7 +131,7 @@ export const Header = styled(motion.div)`
 
 
 export const Link = styled.a`
-  /* Mantenha seus estilos do Link */
+
   color: ${({ theme }) => theme.colors.amarelo};
   font-family: 'Lobster';
   font-weight: 500;

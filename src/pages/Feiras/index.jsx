@@ -19,7 +19,7 @@ function Feiras() {
 
             {fairDays.map(day => (
                 <DayCard
-                    key={day.id} // Chave única para cada item na lista
+                    key={day.id}
                     title={day.title}
                     address={day.address}
                     openingHours={day.openingHours}

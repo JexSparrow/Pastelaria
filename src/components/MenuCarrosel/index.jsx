@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode } from 'swiper/modules'; // Importe FreeMode
+import { Autoplay, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/free-mode'; // Estilos para FreeMode
+import 'swiper/css/free-mode';
 import { CustomSwiperContainer } from './styles';
 
 
